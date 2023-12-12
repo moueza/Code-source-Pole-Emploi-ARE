@@ -1,0 +1,200 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc">
+		<class name="CarencePrefixeAFixerPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantPeriodeOrigine"/>
+			<field name="m_periodeApplicationCarence" embedded="true"/>
+			<field name="m_quantiteInitiale" embedded="true"/>
+			<field name="m_dateFinPeriodeOrigine" embedded="true"/>
+		</class>
+		<class name="CarenceStandardPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="CarenceIslrPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="DifferePC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PreavisMesureConservatoireIndemnisablePC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PreavisMesureConservatoireNonIndemnisablePC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="JustificationReductionSalaireMoisCivilPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_coefficientEcretementHeures"/>
+			<field name="m_montantPlafondHeures"/>
+			<field name="m_totalHeures"/>
+			<field name="m_coefficientEcretementCachets"/>
+			<field name="m_montantPlafondCachets"/>
+			<field name="m_totalCachets"/>
+			<field name="m_heuresMulti"/>
+			<field name="m_plafondMulti"/>
+			<field name="m_listePeriodeActiviteSurMois">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.JustificationReductionSalairePeriodeActiviteSurMoisPC"/>
+			</field>
+		</class>
+		<class name="JustificationReductionSalairePeriodeActiviteSurMoisPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_nombreHeures"/>
+			<field name="m_nombreCachetsGroupes"/>
+			<field name="m_nombreCachetsIsoles"/>
+			<field name="m_siren"/>
+			<field name="m_heuresMono"/>
+			<field name="m_plafondMono"/>
+			<field name="m_coefEcretementHeures"/>
+			<field name="m_contexteEcretement"/>
+		</class>
+		<class name="JustificationSRPeriodeActivitePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_reglement"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_montantPlafond" embedded="true"/>
+			<field name="m_montantSalairePlafonne" embedded="true"/>
+			<field name="m_montantSalaireNonPlafonne" embedded="true"/>
+			<field name="m_listePeriodeRemuneration">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.JustificationSRPeriodeRemunerationPC"/>
+			</field>
+		</class>
+		<class name="JustificationSRPeriodeRemunerationPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_montantRetenu" embedded="true"/>
+			<field name="m_nature"/>
+			<field name="m_montantBrut" embedded="true"/>
+			<field name="m_montantReduit" embedded="true"/>
+			<field name="m_datePaie" embedded="true"/>
+		</class>
+		<class name="JustificationFranchiseCongesPayesPC" identity-type="datastore">
+			<field name="m_periodeCalculFranchiseCp" embedded="true"/>
+			<field name="m_nbJoursTravaillesRetenus"/>
+			<field name="m_formule"/>
+			<field name="m_moisCivil">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.MoisCivilPC"/>
+			</field>
+		</class>
+		<class name="MoisCivilPC" identity-type="datastore">
+			<field name="m_nbJoursTravailles"/>
+			<field name="m_nbJoursRetenus"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_periodeSurMoisCivil">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.PeriodeSurMoisCivilPC"/>
+			</field>
+		</class>
+		<class name="PeriodeSurMoisCivilPC" identity-type="datastore">
+			<field name="m_raisonSociale"/>
+			<field name="m_joursTravailles"/>
+			<field name="m_periode" embedded="true"/>
+		</class>
+		<class name="ConstitutionElementsAdmissionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_presenceDonneesConstitutionDurees"/>
+			<field name="m_dureeEffectiveConstitutionDurees" embedded="true"/>
+			<field name="m_dureeImputationConstitutionDurees" embedded="true"/>
+			<field name="m_dureeTheoriqueConstitutionDurees" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionMontantsBruts"/>
+			<field name="m_montantJournalierBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPartieAConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPartieBConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPartieCConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBaseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_cotisationRetraiteComplementaireConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBrutPensionInvaliditeDeduitConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseDeduitConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPlafondConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_capitalInitialBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_coefA1JustificationMontantsBruts"/>
+			<field name="m_coefA2JustificationMontantsBruts"/>
+			<field name="m_coefB1JustificationMontantsBruts"/>
+			<field name="m_coefB2JustificationMontantsBruts"/>
+			<field name="m_coefCJustificationMontantsBruts"/>
+			<field name="m_montantMiniJustificationMontantsBruts" embedded="true"/>
+			<field name="m_salaireReferenceForfaitaireJustificationMontantsBruts"/>
+			<field name="m_forfaitHeuresJustificationMontantsBruts"/>
+			<field name="m_presenceDonneesConstitutionSalaireReference"/>
+			<field name="m_montantSalaireReferenceInitialConstitutionSalaireReference" embedded="true"/>
+			<field name="m_montantSalaireReferenceInitialPlafonneConstitutionSalaireReference" embedded="true"/>
+			<field name="m_montantSalaireReferenceRevalorisePlafonneConstitutionSalaireReference" embedded="true"/>
+			<field name="m_prcConstitutionSalaireReference" embedded="true"/>
+			<field name="m_montantPlafondConstitutionSalaireReference" embedded="true"/>
+			<field name="m_montantTotalSalairesRetenusJustificationSalaireReference" embedded="true"/>
+			<field name="m_montantTotalPrimesNormalesRetenuesJustificationSalaireReference" embedded="true"/>
+			<field name="m_montantTotalPrimesExceptionnellesRetenuesJustificationSalaireReference" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionSalaireJournalierMoyen"/>
+			<field name="m_dateSalaireJournalierMoyenInitialConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_montantSalaireJournalierMoyenInitialConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_dateSalaireJournalierMoyenRevalorisePlafonneConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_montantSalaireJournalierMoyenRevalorisePlafonneConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_montantPlafondConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDelaisReport"/>
+			<field name="m_nbJoursPMCIndemnConstitutionDelaisReport"/>
+			<field name="m_debutPMCIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termePMCIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursPMCNonIndemnConstitutionDelaisReport"/>
+			<field name="m_debutPMCNonIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termePMCNonIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursCarenceStandardConstitutionDelaisReport"/>
+			<field name="m_debutCarenceStandardConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termeCarenceStandardConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursCarenceISLRConstitutionDelaisReport"/>
+			<field name="m_debutCarenceISLRConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termeCarenceISLRConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursDelaiReportConstitutionDelaisReport"/>
+			<field name="m_debutDelaiReportConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termeDelaiReportConstitutionDelaisReport" embedded="true"/>
+			<field name="m_totalSalairesNonPlafonnesJustificationDiffere" embedded="true"/>
+			<field name="m_smicMensuelJustificationDiffere" embedded="true"/>
+			<field name="m_smicJournalierJustificationDiffere" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionReglementApplicable"/>
+			<field name="m_nomReglementConstitutionReglementApplicable"/>
+			<field name="m_codeProduitReglementConstitutionReglementApplicable"/>
+			<field name="m_presenceDonneesConstitutionDateAttribution"/>
+			<field name="m_dateAttributionConstitutionDateAttribution" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionPointDepartIndemnisation"/>
+			<field name="m_pointDepartIndemnisationConstitutionPointDepartIndemnisation" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionNbHeuresTravaillees"/>
+			<field name="m_nombreHeuresTravailleesEtenduConstitutionNbHeuresTravaillees"/>
+			<field name="m_nombreHeuresTravailleesPlafonneConstitutionNbHeuresTravaillees"/>
+			<field name="m_nombreJoursEmploiDansPRCConstitutionSalaireReference"/>
+			<field name="m_franchiseCongesPayesConstitutionDelaisReport"/>
+			<field name="m_quantiteFranchiseCPMensuelle" embedded="true"/>
+			<field name="m_quantiteFranchiseSalaireMensuelle" embedded="true"/>
+			<field name="m_formuleJustificationDiffere"/>
+			<field name="m_periodeApplicationDifferePrecedentConstitutionDelaisReport" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDateLimiteIndemnisation"/>
+			<field name="m_dateLimiteIndemnisationConstitutionDateLimiteIndemnisation" embedded="true"/>
+			<field name="m_contexteDateLimiteIndemnisationConstitutionDateLimiteIndemnisation"/>
+			<field name="m_pointDepartConstitutionDateLimiteIndemnisation" embedded="true"/>
+			<field name="m_dureeImputeeConstitutionDateLimiteIndemnisation"/>
+			<field name="m_dureeIndemnisationConstitutionDateLimiteIndemnisation" embedded="true"/>
+			<field name="m_nombreHeuresTravailleesMajoreesConstitutionNbHeuresTravaillees"/>
+			<field name="m_montantJournalierBrutNonPrecompteMontantsBruts" embedded="true"/>
+			<field name="m_nombreJoursInactiviteDansPRCConstitutionSalaireReference"/>
+			<field name="m_listeMoisCivilsJustificationReductionSalaire">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.JustificationReductionSalaireMoisCivilPC"/>
+			</field>
+			<field name="m_listePeriodeActiviteJustificationSalaireReference">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.JustificationSRPeriodeActivitePC"/>
+			</field>
+			<field name="m_listePeriodeRetenueJustificationDiffere">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.PeriodeRetenuePC"/>
+			</field>
+			<field name="m_listeCarencesConstitutionDelaisReport">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.CarencePrefixeAFixerPC"/>
+			</field>
+			<field name="m_listePensionInvaliditeMontantBrut">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PensionInvaliditeChaineePC"/>
+			</field>
+			<field name="m_justificationFranchiseCongesPayes"/>
+		</class>
+	</package>
+</jdo>

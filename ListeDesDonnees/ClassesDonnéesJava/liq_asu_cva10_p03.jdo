@@ -1,0 +1,12 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cva10.p03.liquidation.dom.pc">
+		<class name="ObjectifExamenReprisePC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenReprisePC">
+		</class>
+		<class name="ObjectifExamenAdmissionPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenAdmissionPC">
+		</class>
+		<class name="ObjectifExamenRevisionAdmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenRevisionAdmissionPC">
+		</class>
+	</package>
+</jdo>

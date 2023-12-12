@@ -1,0 +1,20 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc">
+		<class name="ConstitutionElementsReprisePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_constitutionDurees"/>
+			<field name="m_constitutionSjr"/>
+			<field name="m_constitutionDelais"/>
+			<field name="m_constitutionSjc"/>
+			<field name="m_constitutionReglementApplicable"/>
+			<field name="m_constitutionDateAttribution"/>
+			<field name="m_constitutionMontantsBruts"/>
+			<field name="m_constitutionPointDepartIndemnisation"/>
+			<field name="m_constitutionCaractereSaisonnier"/>
+			<field name="m_constitutionCoefficientSaisonnier"/>
+			<field name="m_constitutionCoefficientTempsPartiel"/>
+		</class>
+	</package>
+</jdo>

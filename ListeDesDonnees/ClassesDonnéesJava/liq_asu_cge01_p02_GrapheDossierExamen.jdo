@@ -1,0 +1,103 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc">
+		<class name="AttributionPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_referenceExterne"/>
+			<field name="m_regimeFinancementParticulierCaCae"/>
+			<field name="m_topRenoncement"/>
+			<field name="m_nbJoursActiviteCourrierASS"/>
+			<field name="m_cumulMoisActiviteReduite"/>
+			<field name="m_calendrierExecutionCalcul"/>
+			<field name="m_calendrierExecutionAvant"/>
+		</class>
+		<class name="CompetencePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dureeActiviteSecteurPrive"/>
+			<field name="m_dureeActiviteSecteurPriveCaCae"/>
+			<field name="m_dureeActiviteSecteurPublicAffilie"/>
+			<field name="m_dureeActiviteSecteurPublicAutoAssurance"/>
+			<field name="m_dureeActiviteSecteurPublicConventionGestion"/>
+			<field name="m_competenceAdministrative"/>
+			<field name="m_competenceFinanciere"/>
+			<field name="m_libelleEmployeurCompetent"/>
+			<field name="m_numeroConventionGestion"/>
+		</class>
+		<class name="ContributionParticulierePC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.ContributionParticuliereAbstraitPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_contributionParticuliere"/>
+		</class>
+		<class name="DecisionPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_natureDecision"/>
+			<field name="m_validee"/>
+			<field name="m_investigationFraude"/>
+		</class>
+		<class name="DifferePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+			<field name="m_periodeEffet" embedded="true"/>
+		</class>
+		<class name="DossierExamenPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_contexteDdeExpresse"/>
+			<field name="m_motifRejetNotifie"/>
+			<field name="m_typeContributionParticuliere"/>
+			<field name="m_conditionsAttributionAdmission"/>
+			<field name="m_constitutionElementsAdmission"/>
+			<field name="m_conditionsAttributionReprise"/>
+			<field name="m_constitutionElementsReprise"/>
+			<field name="m_dossierAffecte"/>
+			<field name="m_competence"/>
+			<field name="m_contributionParticuliere"/>
+			<field name="m_competenceSousJacente"/>
+		</class>
+		<class name="ExamenPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="OdPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.AttributionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_situationParticuliere"/>
+		</class>
+		<class name="ReadmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.OdPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="RejetPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ReprisePC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.AttributionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenAdmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.ObjectifExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenReprisePC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.ObjectifExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="AntecedentPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.OdPC">
+		</class>
+		<class name="PoursuitePC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.AntecedentPC">
+			<field name="m_uniteTraitement"/>
+		</class>
+		<class name="RepriseAssocieePC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.ReprisePC">
+		</class>
+		<class name="ObjectifExamenNovationPC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.ObjectifExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="NovationPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.AttributionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_situationParticuliere"/>
+		</class>
+		<class name="PoursuiteIndemnisationPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenPoursuiteIndemnisationPC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.ObjectifExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="RepriseSecteurPublicPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+	</package>
+</jdo>

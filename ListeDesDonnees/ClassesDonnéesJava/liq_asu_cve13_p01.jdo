@@ -1,0 +1,10 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cve13.p01.liquidation.dom.pc">
+		<class name="ObjectifExamenAdmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenAdmissionPC">
+		</class>
+		<class name="ObjectifExamenReprisePC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenReprisePC">
+		</class>
+	</package>
+</jdo>

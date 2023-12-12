@@ -1,0 +1,10 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.may17.p02.liquidation.dom.pc">
+		<class name="AdmissionPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.ari.produits.liquidation.dom.pc.AttributionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_calendrierExecutionCalcul"/>
+		</class>
+	</package>
+</jdo>

@@ -1,0 +1,12 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.produits.liquidation.dom.pc">
+		<class name="ConditionsAttributionRevisionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeMotifEchecConditionMontantRevise"/>
+			<field name="m_etatConditionMontantRevise"/>
+			<field name="m_presenceDonneesConditionMontantRevise"/>
+		</class>
+	</package>
+</jdo>

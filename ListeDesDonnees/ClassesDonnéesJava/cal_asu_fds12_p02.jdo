@@ -1,0 +1,9 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.fds12.p02.calcul.dom.pc">
+		<class name="MontantPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.calcul.dom.pc.MontantPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+	</package>
+</jdo>

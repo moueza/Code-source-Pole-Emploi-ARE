@@ -1,0 +1,127 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.mnt.dom.pc">
+		<class name="ConditionAgeMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_ageMinimum" embedded="true"/>
+			<field name="m_dateObtentionAgeMinimum" embedded="true"/>
+			<field name="m_resultatElementDroit" embedded="true"/>
+		</class>
+		<class name="ConditionNombreTrimestresMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_nombreTrimestresRequis" embedded="true"/>
+			<field name="m_dateObtentionNombreTrimestres" embedded="true"/>
+			<field name="m_resultatElementDroit" embedded="true"/>
+		</class>
+		<class name="ConditionAppartenanceMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_quantiteAppartenanceRequise" embedded="true"/>
+			<field name="m_quantiteAppartenanceCalculee" embedded="true"/>
+			<field name="m_quantiteAppartenanceImposee" embedded="true"/>
+			<field name="m_resultatElementDroit" embedded="true"/>
+		</class>
+		<class name="ConditionDecisionCPMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_refusFNE"/>
+			<field name="m_departVolontaire"/>
+			<field name="m_decisionCPFavorable"/>
+			<field name="m_resultatElementDroit" embedded="true"/>
+		</class>
+		<class name="ConditionDureeIndemnisationMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_nombreJoursDureeIndemnisationRequise" embedded="true"/>
+			<field name="m_dateObtentionDureeIndemnisation" embedded="true"/>
+			<field name="m_resultatElementDroit" embedded="true"/>
+		</class>
+		<class name="ConditionActiviteMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_quantiteActiviteContinueRequise" embedded="true"/>
+			<field name="m_quantiteActiviteContinueCalculee" embedded="true"/>
+			<field name="m_quantiteActiviteContinueImposee" embedded="true"/>
+			<field name="m_quantiteActiviteDiscontinueRequise" embedded="true"/>
+			<field name="m_quantiteActiviteDiscontinueCalculee" embedded="true"/>
+			<field name="m_quantiteActiviteDiscontinueImposee" embedded="true"/>
+			<field name="m_quantiteActiviteEmploiSalarieRequise" embedded="true"/>
+			<field name="m_quantiteActiviteEmploiSalarieCalculee" embedded="true"/>
+			<field name="m_quantiteActiviteEmploiSalarieImposee" embedded="true"/>
+			<field name="m_quantiteActiviteIntermittentRequise" embedded="true"/>
+			<field name="m_quantiteActiviteIntermittentCalculee" embedded="true"/>
+			<field name="m_quantiteActiviteIntermittentImposee" embedded="true"/>
+			<field name="m_resultatElementDroit" embedded="true"/>
+		</class>
+		<class name="ConditionsAttributionAdmissionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_conditionAge"/>
+			<field name="m_conditionNombreTrimestres"/>
+			<field name="m_conditionActivite"/>
+			<field name="m_conditionAppartenance"/>
+			<field name="m_conditionDureeIndemnisation"/>
+			<field name="m_conditionDecisionCP"/>
+		</class>
+		<class name="DemandeMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_quantiteJourReliquat" embedded="true"/>
+			<field name="m_motifReexamenPrincipal"/>
+			<field name="m_estMigree"/>
+			<field name="m_estDeneutralisable"/>
+			<field name="m_estNeutraliseeLiquidation"/>
+			<field name="m_estNeutraliseeCalcul"/>
+			<field name="m_estLiquidable"/>
+			<field name="m_datePremiereValidation" embedded="true"/>
+			<field name="m_dateDerniereValidation" embedded="true"/>
+			<field name="m_dateAnnulationReexamen" embedded="true"/>
+			<field name="m_listeMotifsReexamen">
+				<collection element-type="java.lang.String"/>
+			</field>
+			<field name="m_dossierExamen"/>
+			<field name="m_donneesForcees"/>
+			<field name="m_classementAdministratif"/>
+			<field name="m_formulaire"/>
+			<field name="m_demandeMaintenue"/>
+			<field name="m_evenementReferenceExamen"/>
+		</class>
+		<class name="DonneesForceesPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_quantiteAppartenance" embedded="true"/>
+			<field name="m_quantiteActiviteTroisAns" embedded="true"/>
+			<field name="m_quantiteActiviteCinqAns" embedded="true"/>
+			<field name="m_activiteContinue" embedded="true"/>
+			<field name="m_decisionCPFavorable" embedded="true"/>
+			<field name="m_motifDecisionCP" embedded="true"/>
+		</class>
+		<class name="FormulaireMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_referenceExterne"/>
+			<field name="m_motifEnvoi" embedded="true"/>
+		</class>
+		<class name="DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_demande"/>
+			<field name="m_conditionsAttributionAdmission"/>
+		</class>
+		<class name="ExamenPC" persistence-capable-superclass="fr.unedic.cali.asu.mnt.dom.pc.DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="AttentePC" persistence-capable-superclass="fr.unedic.cali.asu.mnt.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="DecisionPC" persistence-capable-superclass="fr.unedic.cali.asu.mnt.dom.pc.DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_natureDecision" embedded="true"/>
+			<field name="m_validee"/>
+		</class>
+		<class name="AccordPC" persistence-capable-superclass="fr.unedic.cali.asu.mnt.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="RefusPC" persistence-capable-superclass="fr.unedic.cali.asu.mnt.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="EreDemandeMaintienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+		</class>
+	</package>
+</jdo>

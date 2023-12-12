@@ -1,0 +1,118 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.produits.liquidation.dom.pc">
+		<class name="ConstitutionElementsReprisePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateAttributionConstitutionDateAttribution" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDateAttribution"/>
+			<field name="m_debutCarenceDiffereConstitutionDelais" embedded="true"/>
+			<field name="m_debutCarenceICCPConstitutionDelais" embedded="true"/>
+			<field name="m_debutCarenceISLRConstitutionDelais" embedded="true"/>
+			<field name="m_debutPMCConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarenceDiffereConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarenceICCPConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarenceISLRConstitutionDelais" embedded="true"/>
+			<field name="m_termePMCConstitutionDelais" embedded="true"/>
+			<field name="m_nbJoursCarenceDiffereConstitutionDelais"/>
+			<field name="m_nbJoursCarenceICCPConstitutionDelais"/>
+			<field name="m_nbJoursCarenceISLRConstitutionDelais"/>
+			<field name="m_nbJoursPMCConstitutionDelais"/>
+			<field name="m_periodeReference91joursConstitutionDelais" embedded="true"/>
+			<field name="m_typePmcConstitutionDelais"/>
+			<field name="m_presenceDonneesConstitutionDelais"/>
+			<field name="m_codeProduitConstitutionReglementApplicable"/>
+			<field name="m_nomReglementConstitutionReglementApplicable"/>
+			<field name="m_presenceDonneesConstitutionReglementApplicable"/>
+			<field name="m_sjcrpConstitutionSjc" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionSjc"/>
+			<field name="m_dateEvenementConstitutionSjc" embedded="true"/>
+			<field name="m_plafondConstitutionSjc" embedded="true"/>
+			<field name="m_sjcInitialConstitutionSjc" embedded="true"/>
+			<field name="m_sjrrpConstitutionSjr" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionSjr"/>
+			<field name="m_salaireReferenceNonPlafonneConstitutionSjr"/>
+			<field name="m_totalPrimesExceptionnellesRetenuesConstitutionSjr"/>
+			<field name="m_totalPrimesNormalesRetenuesConstitutionSjr"/>
+			<field name="m_totalSalairesRetenusConstitutionSjr"/>
+			<field name="m_codeEmploiA2b"/>
+			<field name="m_dateEvenementConstitutionSjr" embedded="true"/>
+			<field name="m_plafondSjrConstitutionSjr" embedded="true"/>
+			<field name="m_sjrInitialConstitutionSjr" embedded="true"/>
+			<field name="m_dureeEffectiveConstitutionDurees" embedded="true"/>
+			<field name="m_dureeImputationConstitutionDurees" embedded="true"/>
+			<field name="m_dureeTheoriqueConstitutionDurees" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDurees"/>
+			<field name="m_activite3Sur5ConstitutionCaractereSaisonnier"/>
+			<field name="m_caractereSaisonnierRetenuConstitutionCaractereSaisonnier"/>
+			<field name="m_periodeRechercheActiviteSaisonniereConstitutionCaractereSaisonnier" embedded="true"/>
+			<field name="m_periodeReferenceSaisonnierConstitutionCaractereSaisonnier" embedded="true"/>
+			<field name="m_typeCaractereSaisonnierRetenuConstitutionCaractereSaisonnier"/>
+			<field name="m_presenceDonneesConstitutionCaractereSaisonnier"/>
+			<field name="m_coefficientSaisonnierRetenuConstitutionCoefficientSaissonier"/>
+			<field name="m_jourActiviteDouzeDerniersMoisConstitutionCoefficientSaissonier" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionCoefficientSaisonnier"/>
+			<field name="m_capitalInitialBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_crcConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseDeduitConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBaseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBrutSansPensionInvaliditeADeduireConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantMiniConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPlafondConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPlancherConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_pensionInvaliditeADeduirePriseEnCompteConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionMontantsBruts"/>
+			<field name="m_coefficientTempsPartielRetenuConstitutionCoefficientTempsPartiel"/>
+			<field name="m_presenceDonneesConstitutionCoefficientTempsPartiel"/>
+			<field name="m_pjiConstitutionPointDepartIndemnisation" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionPointDepartIndemnisation"/>
+			<field name="m_sjnprConstitutionSjr" embedded="true"/>
+			<field name="m_presenceTransactionConstitutionDelais"/>
+			<field name="m_autresIndemnitesLegalesConstitutionDelais"/>
+			<field name="m_quantiteJourImputationForceConstitutionDurees" embedded="true"/>
+			<field name="m_quantiteTotalJourImputationConstitutionDurees" embedded="true"/>
+			<field name="m_estAccordPlusDe182jCsrConstitutionDurees"/>
+			<field name="m_dateMaxiIndemnisationCsrConstitutionDurees" embedded="true"/>
+			<field name="m_nbJoursCarencePreavisLegalConstitutionDelais"/>
+			<field name="m_debutCarencePreavisLegalConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarencePreavisLegalConstitutionDelais" embedded="true"/>
+			<field name="m_typeMontantRetenuConstitutionMontantsBruts"/>
+			<field name="m_montantDroitAssocieConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_contexteParticulierSjr"/>
+			<field name="m_contexteParticulierSjc"/>
+			<field name="m_dateLimiteIndem" embedded="true"/>
+			<field name="m_dateDebutIndem" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDateLimIndemn"/>
+			<field name="m_contexteDateLimiteIndemnisation"/>
+			<field name="m_estDureeTheoriquePlafonneeConstitutionDurees"/>
+			<field name="m_sommeMontantRevisionConstitutionSjr"/>
+			<field name="m_dureePostPrimeCspConstitutionDurees" embedded="true"/>
+			<field name="m_sjrMontantMaxAspConstitutionMontantsBruts"/>
+			<field name="m_dureeImputationPostPrime"/>
+			<field name="m_eligibleAllongementAREFConstitutionDurees"/>
+			<field name="m_dureeAllongementAREFConstitutionDurees"/>
+			<field name="m_droitInterimaireConstitutionReglementApplicable"/>
+			<field name="m_sjrTheoriqueConstitutionSjr"/>
+			<field name="m_coeffReducteurSjrConstitutionSjr"/>
+			<field name="m_plancherCoefficientSjrConstitutionSjr"/>
+			<field name="m_dureeCalculeeConstitutionDurees"/>
+			<field name="m_dureeMaximaleConstitutionDurees"/>
+			<field name="m_dureeMinimaleConstitutionDurees"/>
+			<field name="m_prcConstitutionSjr"/>
+			<field name="m_carences">
+				<collection element-type="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC"/>
+			</field>
+			<field name="m_listeSjrActiviteConserveeConstitutionSjc">
+				<collection element-type="fr.unedic.cali.asu.produits.liquidation.dom.pc.SjrActiviteConserveePC"/>
+			</field>
+			<field name="m_listePeriodesChomageSaisonnierConstitutionCaractereSaisonnier">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeChomageSaisonnierPC"/>
+			</field>
+			<field name="m_listePensionInvaliditeMontantBrut">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PensionInvaliditeChaineePC"/>
+			</field>
+		</class>
+	</package>
+</jdo>

@@ -1,0 +1,31 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.may17.p02.calcul.dom.pc">
+		<class name="MontantPC" persistence-capable-superclass="fr.unedic.cali.dom.pc.MontantBaseAbstraitPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="MontantMAYFPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.may17.p02.calcul.dom.pc.MontantPC">
+		</class>
+		<class name="DureeIndemnisationPremiereTranchePC" persistence-capable-superclass="fr.unedic.cali.dom.pc.DureeIndemnisationAbstraitePC">
+			<field name="m_codeFormuleMontant"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante"/>
+		</class>
+		<class name="DureeIndemnisationTroisiemeTranchePC" persistence-capable-superclass="fr.unedic.cali.dom.pc.DureeIndemnisationAbstraitePC">
+			<field name="m_codeFormuleMontant"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante"/>
+		</class>
+		<class name="DureeIndemnisationSecondeTranchePC" persistence-capable-superclass="fr.unedic.cali.dom.pc.DureeIndemnisationAbstraitePC">
+			<field name="m_codeFormuleMontant"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante"/>
+		</class>
+		<class name="CalendrierExecutionCalculPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.calcul.dom.pc.CalendrierExecutionCalculPeriodiquePC">
+			<field name="m_dateDrv" embedded="true"/>
+		</class>
+		<class name="UniteTraitementPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.calcul.dom.pc.UniteTraitementPC">
+		</class>
+	</package>
+</jdo>

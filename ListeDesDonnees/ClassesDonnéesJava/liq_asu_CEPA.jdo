@@ -1,0 +1,239 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.produits.liquidation.dom.pc">
+		<class name="CarencePrefixeAFixerPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantPeriodeOrigine"/>
+			<field name="m_periodeApplicationCarence" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+			<field name="m_dateFinPeriodeOrigine" embedded="true"/>
+		</class>
+		<class name="CarenceIccpPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="CarenceIslrPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PrcPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dureePrc"/>
+			<field name="m_nombreJourAbsence"/>
+			<field name="m_diviseur"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_prip" embedded="true"/>
+			<field name="m_nombreHeuresTotal"/>
+			<field name="m_srip"/>
+			<field name="m_nombreJourDeductible"/>
+			<field name="m_nombreJourInappartenance"/>
+			<field name="m_nombreJourTravailEffectif"/>
+			<field name="m_nombreHeuresA4ouA5"/>
+			<field name="m_droitCongesA4ouA5"/>
+			<field name="m_topContratsDeTypeParticulier"/>
+			<field name="m_estSripReduit"/>
+		</class>
+		<class name="PrcSjcPC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.PrcPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PrcSjrPC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.PrcPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="SjrActiviteConserveePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_sjrInitial" embedded="true"/>
+			<field name="m_identifiantPeriodeActiviteConservee"/>
+			<field name="m_typeActiviteConservee"/>
+			<field name="m_prc"/>
+		</class>
+		<class name="ConstitutionElementsAdmissionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateAttributionConstitutionDateAttribution" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDateAttribution"/>
+			<field name="m_debutCarenceDiffereConstitutionDelais" embedded="true"/>
+			<field name="m_debutCarenceICCPConstitutionDelais" embedded="true"/>
+			<field name="m_debutCarenceISLRConstitutionDelais" embedded="true"/>
+			<field name="m_debutPMCConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarenceDiffereConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarenceICCPConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarenceISLRConstitutionDelais" embedded="true"/>
+			<field name="m_termePMCConstitutionDelais" embedded="true"/>
+			<field name="m_nbJoursCarenceDiffereConstitutionDelais"/>
+			<field name="m_nbJoursCarenceICCPConstitutionDelais"/>
+			<field name="m_nbJoursCarenceISLRConstitutionDelais"/>
+			<field name="m_nbJoursPMCConstitutionDelais"/>
+			<field name="m_periodeReference91joursConstitutionDelais" embedded="true"/>
+			<field name="m_typePmcConstitutionDelais"/>
+			<field name="m_presenceDonneesConstitutionDelais"/>
+			<field name="m_article3ConstitutionQuantiteAffiliation"/>
+			<field name="m_dureeInitialeConstitutionQuantiteAffiliation" embedded="true"/>
+			<field name="m_periodePRAConstitutionQuantiteAffiliation" embedded="true"/>
+			<field name="m_quantiteAffiliationAcquiseConstitutionQuantiteAffiliation" embedded="true"/>
+			<field name="m_quantiteAssimilationAcquiseConstitutionQuantiteAffiliation" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionQuantiteAffiliation"/>
+			<field name="m_codeProduitConstitutionReglementApplicable"/>
+			<field name="m_nomReglementConstitutionReglementApplicable"/>
+			<field name="m_presenceDonneesConstitutionReglementApplicable"/>
+			<field name="m_sjcrpConstitutionSjc" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionSjc"/>
+			<field name="m_dateEvenementConstitutionSjc" embedded="true"/>
+			<field name="m_plafondConstitutionSjc" embedded="true"/>
+			<field name="m_sjcInitialConstitutionSjc" embedded="true"/>
+			<field name="m_sjrrpConstitutionSjr" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionSjr"/>
+			<field name="m_salaireReferenceNonPlafonneConstitutionSjr"/>
+			<field name="m_totalPrimesExceptionnellesRetenuesConstitutionSjr"/>
+			<field name="m_totalPrimesNormalesRetenuesConstitutionSjr"/>
+			<field name="m_totalSalairesRetenusConstitutionSjr"/>
+			<field name="m_codeEmploiA2b"/>
+			<field name="m_dateEvenementConstitutionSjr" embedded="true"/>
+			<field name="m_plafondSjrConstitutionSjr" embedded="true"/>
+			<field name="m_sjrInitialConstitutionSjr" embedded="true"/>
+			<field name="m_dureeEffectiveConstitutionDurees" embedded="true"/>
+			<field name="m_dureeImputationConstitutionDurees" embedded="true"/>
+			<field name="m_dureeTheoriqueConstitutionDurees" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDurees"/>
+			<field name="m_activite3Sur5ConstitutionCaractereSaisonnier"/>
+			<field name="m_caractereSaisonnierRetenuConstitutionCaractereSaisonnier"/>
+			<field name="m_periodeRechercheActiviteSaisonniereConstitutionCaractereSaisonnier" embedded="true"/>
+			<field name="m_periodeReferenceSaisonnierConstitutionCaractereSaisonnier" embedded="true"/>
+			<field name="m_typeCaractereSaisonnierRetenuConstitutionCaractereSaisonnier"/>
+			<field name="m_presenceDonneesConstitutionCaractereSaisonnier"/>
+			<field name="m_coefficientSaisonnierRetenuConstitutionCoefficientSaissonier"/>
+			<field name="m_jourActiviteDouzeDerniersMoisConstitutionCoefficientSaissonier" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionCoefficientSaisonnier"/>
+			<field name="m_capitalInitialBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_crcConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseDeduitConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBaseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBrutSansPensionInvaliditeADeduireConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantMiniConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPlafondConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPlancherConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_pensionInvaliditeADeduirePriseEnCompteConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionMontantsBruts"/>
+			<field name="m_coefficientTempsPartielRetenuConstitutionCoefficientTempsPartiel"/>
+			<field name="m_presenceDonneesConstitutionCoefficientTempsPartiel"/>
+			<field name="m_pjiConstitutionPointDepartIndemnisation" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionPointDepartIndemnisation"/>
+			<field name="m_capitalDroitPrecedentConstitutionProduitResultant" embedded="true"/>
+			<field name="m_typeCapitalRetenuConstitutionProduitResultant"/>
+			<field name="m_dureeDroitPrecedentConstitutionProduitResultant" embedded="true"/>
+			<field name="m_montantDroitPrecedentConstitutionProduitResultant" embedded="true"/>
+			<field name="m_typeMontantRetenuConstitutionProduitResultant"/>
+			<field name="m_sjrrpProduitPrecedentConstitutionProduitResultant" embedded="true"/>
+			<field name="m_crcConstitutionProduitResultant" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseDeduitConstitutionProduitResultant" embedded="true"/>
+			<field name="m_montantJournalierBrutConstitutionProduitResultant" embedded="true"/>
+			<field name="m_pensionInvaliditeADeduirePriseEnCompteConstitutionProduitResultant" embedded="true"/>
+			<field name="m_capitalMaxConstitutionProduitResultant" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionProduitResultant"/>
+			<field name="m_dureeEffectiveConstitutionProduitResultant" embedded="true"/>
+			<field name="m_dureeImputationConstitutionProduitResultant" embedded="true"/>
+			<field name="m_dureeTheoriqueConstitutionProduitResultant" embedded="true"/>
+			<field name="m_quantiteJourImputationForceConstitutionDurees" embedded="true"/>
+			<field name="m_quantiteTotalJourImputationConstitutionDurees" embedded="true"/>
+			<field name="m_sjnprConstitutionSjr" embedded="true"/>
+			<field name="m_presenceTransactionConstitutionDelais"/>
+			<field name="m_autresIndemnitesLegalesConstitutionDelais"/>
+			<field name="m_dateLimiteIndem" embedded="true"/>
+			<field name="m_montantJournalierPreavis" embedded="true"/>
+			<field name="m_estSjrRevise"/>
+			<field name="m_presenceDonneesConstitutionDateLimiteIndemnisation"/>
+			<field name="m_dateDebutIndem" embedded="true"/>
+			<field name="m_quatreVingtSjr"/>
+			<field name="m_quatreVingtMontantPreavis"/>
+			<field name="m_miniAREF"/>
+			<field name="m_estAccordPlusDe182jCsrConstitutionDurees"/>
+			<field name="m_dateMaxiIndemnisationCsrConstitutionDurees" embedded="true"/>
+			<field name="m_nbJoursCarencePreavisLegalConstitutionDelais"/>
+			<field name="m_debutCarencePreavisLegalConstitutionDelais" embedded="true"/>
+			<field name="m_termeCarencePreavisLegalConstitutionDelais" embedded="true"/>
+			<field name="m_estAffiliationPlafonneeConstitutionQuantiteAffiliation"/>
+			<field name="m_typeMontantRetenuConstitutionMontantsBruts"/>
+			<field name="m_montantDroitAssocieConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_contexteParticulierSjr"/>
+			<field name="m_contexteParticulierSjc"/>
+			<field name="m_delaiDebutEfe" embedded="true"/>
+			<field name="m_dateDebutEfe" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionElementsExamenFilEau"/>
+			<field name="m_contexteDateLimiteIndemnisation"/>
+			<field name="m_estDureeTheoriquePlafonneeConstitutionDurees"/>
+			<field name="m_sommeMontantRevisionConstitutionSjr"/>
+			<field name="m_dureePostPrimeCspConstitutionDurees" embedded="true"/>
+			<field name="m_sjrMontantMaxAspConstitutionMontantsBruts"/>
+			<field name="m_dureeImputationPostPrime"/>
+			<field name="m_eligibleAllongementAREFConstitutionDurees"/>
+			<field name="m_dureeAllongementAREFConstitutionDurees"/>
+			<field name="m_droitInterimaireConstitutionReglementApplicable"/>
+			<field name="m_dureeAllongementAREFSousJacentConstitutionDurees"/>
+			<field name="m_sjrTheoriqueConstitutionSjr"/>
+			<field name="m_coeffReducteurSjrConstitutionSjr"/>
+			<field name="m_plancherCoefficientSjrConstitutionSjr"/>
+			<field name="m_dureeCalculeeConstitutionDurees"/>
+			<field name="m_dureeMinimaleConstitutionDurees"/>
+			<field name="m_dureeMaximaleConstitutionDurees"/>
+			<field name="m_carences">
+				<collection element-type="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC"/>
+			</field>
+			<field name="m_listeSjrActiviteConserveeConstitutionSjc">
+				<collection element-type="fr.unedic.cali.asu.produits.liquidation.dom.pc.SjrActiviteConserveePC"/>
+			</field>
+			<field name="m_prcConstitutionSjr"/>
+			<field name="m_listePeriodesChomageSaisonnierConstitutionCaractereSaisonnier">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeChomageSaisonnierPC"/>
+			</field>
+			<field name="m_listePensionInvaliditeMontantBrut">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PensionInvaliditeChaineePC"/>
+			</field>
+			<field name="m_listePensionInvaliditeProduitResultant">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PensionInvaliditeChaineePC"/>
+			</field>
+			<field name="m_justificationDroitResultant"/>
+		</class>
+		<class name="DifferePC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PreavisMesureConservatoireIndemnisablePC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PreavisMesureConservatoireNonIndemnisablePC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PreavisLegalPC" identity-type="datastore" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="JustificationDroitResultantPC" identity-type="datastore">
+			<field name="m_competenceFinanciereDroitCourant"/>
+			<field name="m_montantInitialDroitCourant" embedded="true"/>
+			<field name="m_capitalDroitCourant" embedded="true"/>
+			<field name="m_imputationDroitCourant" embedded="true"/>
+			<field name="m_dureeDroitCourant" embedded="true"/>
+			<field name="m_avantageVieillesseDroitCourant" embedded="true"/>
+			<field name="m_pensionInvaliditeDroitCourant" embedded="true"/>
+			<field name="m_crcDroitCourantCompCapitaux" embedded="true"/>
+			<field name="m_montantBrutDroitCourantCompCapitaux" embedded="true"/>
+			<field name="m_montantBrutDroitCourantCompMontants" embedded="true"/>
+			<field name="m_competenceFinanciereDroitPrecedent"/>
+			<field name="m_montantInitialDroitPrecedent" embedded="true"/>
+			<field name="m_capitalDroitPrecedent" embedded="true"/>
+			<field name="m_imputationDroitPrecedent" embedded="true"/>
+			<field name="m_dureeDroitPrecedent" embedded="true"/>
+			<field name="m_avantageVieillesseDroitPrecedent" embedded="true"/>
+			<field name="m_pensionInvaliditeDroitPrecedent" embedded="true"/>
+			<field name="m_crcDroitPrecedentCompCapitaux" embedded="true"/>
+			<field name="m_montantBrutDroitPrecedentCompCapitaux" embedded="true"/>
+			<field name="m_montantBrutDroitPrecedentCompMontants" embedded="true"/>
+			<field name="m_competenceFinanciereDroitRetenu"/>
+			<field name="m_montantDroitRetenu" embedded="true"/>
+			<field name="m_capitalDroitRetenu" embedded="true"/>
+			<field name="m_imputationDroitRetenu" embedded="true"/>
+			<field name="m_dureeDroitRetenu" embedded="true"/>
+			<field name="m_estCasParticulierPensionInvalidite"/>
+			<field name="m_statutPensionInvaliditeDroitCourant"/>
+			<field name="m_crcDroitCourantCompMontants" embedded="true"/>
+			<field name="m_crcDroitPrecedentCompMontants" embedded="true"/>
+		</class>
+	</package>
+</jdo>

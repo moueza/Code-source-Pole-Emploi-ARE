@@ -1,0 +1,87 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc">
+		<class name="ConstitutionElementsReprisePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_presenceDonneesConstitutionDurees"/>
+			<field name="m_dureeEffectiveConstitutionDurees" embedded="true"/>
+			<field name="m_dureeImputationConstitutionDurees" embedded="true"/>
+			<field name="m_dureeTheoriqueConstitutionDurees" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionMontantsBruts"/>
+			<field name="m_montantJournalierBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPartieAConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPartieBConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPartieCConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBaseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_cotisationRetraiteComplementaireConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantBrutPensionInvaliditeDeduitConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseDeduitConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_montantPlafondConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_capitalInitialBrutConstitutionMontantsBruts" embedded="true"/>
+			<field name="m_coefA1JustificationMontantsBruts"/>
+			<field name="m_coefA2JustificationMontantsBruts"/>
+			<field name="m_coefB1JustificationMontantsBruts"/>
+			<field name="m_coefB2JustificationMontantsBruts"/>
+			<field name="m_coefCJustificationMontantsBruts"/>
+			<field name="m_montantMiniJustificationMontantsBruts" embedded="true"/>
+			<field name="m_salaireReferenceForfaitaireJustificationMontantsBruts"/>
+			<field name="m_forfaitHeuresJustificationMontantsBruts"/>
+			<field name="m_presenceDonneesConstitutionSalaireJournalierMoyen"/>
+			<field name="m_dateSalaireJournalierMoyenInitialConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_montantSalaireJournalierMoyenInitialConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_dateSalaireJournalierMoyenRevalorisePlafonneConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_montantSalaireJournalierMoyenRevalorisePlafonneConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_montantPlafondConstitutionSalaireJournalierMoyen" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDelaisReport"/>
+			<field name="m_nbJoursPMCIndemnConstitutionDelaisReport"/>
+			<field name="m_debutPMCIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termePMCIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursPMCNonIndemnConstitutionDelaisReport"/>
+			<field name="m_debutPMCNonIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termePMCNonIndemnConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursCarenceStandardConstitutionDelaisReport"/>
+			<field name="m_debutCarenceStandardConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termeCarenceStandardConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursCarenceISLRConstitutionDelaisReport"/>
+			<field name="m_debutCarenceISLRConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termeCarenceISLRConstitutionDelaisReport" embedded="true"/>
+			<field name="m_nbJoursDelaiReportConstitutionDelaisReport"/>
+			<field name="m_debutDelaiReportConstitutionDelaisReport" embedded="true"/>
+			<field name="m_termeDelaiReportConstitutionDelaisReport" embedded="true"/>
+			<field name="m_totalSalairesNonPlafonnesJustificationDiffere" embedded="true"/>
+			<field name="m_smicMensuelJustificationDiffere" embedded="true"/>
+			<field name="m_smicJournalierJustificationDiffere" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionReglementApplicable"/>
+			<field name="m_nomReglementConstitutionReglementApplicable"/>
+			<field name="m_codeProduitReglementConstitutionReglementApplicable"/>
+			<field name="m_presenceDonneesConstitutionDateAttribution"/>
+			<field name="m_dateAttributionConstitutionDateAttribution" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionPointDepartIndemnisation"/>
+			<field name="m_pointDepartIndemnisationConstitutionPointDepartIndemnisation" embedded="true"/>
+			<field name="m_franchiseCongesPayesConstitutionDelaisReport"/>
+			<field name="m_quantiteFranchiseCPMensuelle" embedded="true"/>
+			<field name="m_quantiteFranchiseSalaireMensuelle" embedded="true"/>
+			<field name="m_formuleJustificationDiffere"/>
+			<field name="m_periodeApplicationDifferePrecedentConstitutionDelaisReport" embedded="true"/>
+			<field name="m_presenceDonneesConstitutionDateLimiteIndemnisation"/>
+			<field name="m_dateLimiteIndemnisationConstitutionDateLimiteIndemnisation" embedded="true"/>
+			<field name="m_contexteDateLimiteIndemnisationConstitutionDateLimiteIndemnisation"/>
+			<field name="m_pointDepartConstitutionDateLimiteIndemnisation" embedded="true"/>
+			<field name="m_dureeImputeeConstitutionDateLimiteIndemnisation"/>
+			<field name="m_dureeIndemnisationConstitutionDateLimiteIndemnisation" embedded="true"/>
+			<field name="m_montantJournalierBrutNonPrecompteMontantsBruts" embedded="true"/>
+			<field name="m_listePeriodeRetenueJustificationDiffere">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.PeriodeRetenuePC"/>
+			</field>
+			<field name="m_listeCarencesConstitutionDelaisReport">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.CarencePrefixeAFixerPC"/>
+			</field>
+			<field name="m_listePensionInvaliditeMontantBrut">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PensionInvaliditeChaineePC"/>
+			</field>
+			<field name="m_justificationFranchiseCongesPayes"/>
+		</class>
+	</package>
+</jdo>

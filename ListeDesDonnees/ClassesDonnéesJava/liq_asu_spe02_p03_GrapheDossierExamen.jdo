@@ -1,0 +1,142 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc">
+		<class name="ActiviteParticipantePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periodeActivite" embedded="true"/>
+			<field name="m_nature"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_quantiteTotaleTravaillee" embedded="true"/>
+			<field name="m_presencePNDSSurActivite"/>
+		</class>
+		<class name="AttributionPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_referenceExterne"/>
+			<field name="m_topRenoncement"/>
+			<field name="m_calendrierExecutionCalcul"/>
+			<field name="m_calendrierExecutionAvant"/>
+		</class>
+		<class name="DecisionPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_validee"/>
+			<field name="m_natureDecision"/>
+			<field name="m_investigationFraude"/>
+		</class>
+		<class name="DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_motifRejetNotifie"/>
+			<field name="m_contexteDdeExpresse"/>
+			<field name="m_dossierAffecte"/>
+			<field name="m_constitutionElementsAdmission"/>
+			<field name="m_constitutionElementsReprise"/>
+			<field name="m_conditionAttributionReprise"/>
+			<field name="m_conditionAttributionAdmission"/>
+		</class>
+		<class name="ExamenPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.DossierExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ValidationProduitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_presenceDonneesJustificationAffiliation"/>
+			<field name="m_rangAllongement"/>
+			<field name="m_estProduitValide"/>
+			<field name="m_heuresRequises" embedded="true"/>
+			<field name="m_listeAllongementsPra">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.AllongementPraPC"/>
+			</field>
+			<field name="m_listeActivitesParticipantes">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.ActiviteParticipantePC"/>
+			</field>
+			<field name="m_listeAffiliationsAssimilees">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.AffiliationAssimileePC"/>
+			</field>
+			<field name="m_listeAffiliationsSupplementaires">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.AffiliationSupplementairePC"/>
+			</field>
+			<field name="m_listePeriodesElementairesAffiliation">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.PeriodeElementaireAffiliationPC"/>
+			</field>
+		</class>
+		<class name="ObjectifExamenAdmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.ObjectifExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenReprisePC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.ObjectifExamenPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="OdPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.AttributionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_situationParticuliere"/>
+		</class>
+		<class name="PeriodeRetenuePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_montantRetenu" embedded="true"/>
+			<field name="m_nature"/>
+			<field name="m_nomReglement"/>
+			<field name="m_codeProduitReglement"/>
+		</class>
+		<class name="ReadmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.OdPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="RejetPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.DecisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ReprisePC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.AttributionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="AllongementPraPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_nature"/>
+			<field name="m_periodeActivite" embedded="true"/>
+			<field name="m_duree" embedded="true"/>
+		</class>
+		<class name="AffiliationSupplementairePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_nature"/>
+			<field name="m_quantite" embedded="true"/>
+		</class>
+		<class name="PeriodeElementaireAffiliationPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_mois" embedded="true"/>
+			<field name="m_affiliationRetenue" embedded="true"/>
+			<field name="m_heuresA8"/>
+			<field name="m_heuresA10"/>
+			<field name="m_cachetIsoleA8"/>
+			<field name="m_cachetGroupeA8"/>
+			<field name="m_cachetIsoleA10"/>
+			<field name="m_cachetGroupeA10"/>
+			<field name="m_heuresComplementairesA10"/>
+			<field name="m_montantPlafondCachets"/>
+			<field name="m_montantPlafondHeures"/>
+			<field name="m_quantiteHeureExercee"/>
+			<field name="m_quantiteCachetGroupeIsoleHeureExercee"/>
+			<field name="m_heuresApresPlafonnementMonoEmployeur"/>
+			<field name="m_heuresApresPlafonnementMultiEmployeur"/>
+			<field name="m_estPlafonneMultiEmployeur"/>
+			<field name="m_listePeriodesElementairesEmployeur">
+				<collection element-type="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.PeriodeElementaireEmployeurPC"/>
+			</field>
+		</class>
+		<class name="AffiliationAssimileePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_nature"/>
+			<field name="m_quantite" embedded="true"/>
+		</class>
+		<class name="AntecedentPC" persistence-capable-superclass="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc.OdPC">
+		</class>
+		<class name="PeriodeElementaireEmployeurPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_numeroAffiliation"/>
+			<field name="m_numeroSiret"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_heuresA8Totales"/>
+			<field name="m_heuresA10Totales"/>
+			<field name="m_heuresPlafonnees"/>
+			<field name="m_plafond"/>
+			<field name="m_estPlafonneMonoEmployeur"/>
+		</class>
+	</package>
+</jdo>

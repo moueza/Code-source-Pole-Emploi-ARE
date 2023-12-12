@@ -1,0 +1,21 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cge01.p05.liquidation.dom.pc">
+		<class name="ObjectifExamenReprisePC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenReprisePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenRevisionPC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenRevisionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenAdmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenAdmissionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenAdmissionFinAsrPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p05.liquidation.dom.pc.ObjectifExamenAdmissionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ObjectifExamenRevisionAdmissionPC" persistence-capable-superclass="fr.unedic.cali.asu.produits.liquidation.dom.pc.ObjectifExamenRevisionAdmissionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+	</package>
+</jdo>

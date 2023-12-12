@@ -1,0 +1,281 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.dom.pivot.pc">
+		<class name="DemandePivotPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_attribution"/>
+			<field name="m_decision"/>
+			<field name="m_aides"/>
+			<field name="m_aidesNcp"/>
+		</class>
+		<class name="AttributionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantOuvertureDroit"/>
+			<field name="m_identifiantReprise"/>
+			<field name="m_referenceExterneDemande"/>
+			<field name="m_dateEffetAttribution" embedded="true"/>
+			<field name="m_pji" embedded="true"/>
+			<field name="m_codeProduit"/>
+			<field name="m_codeProduitDroitCourant"/>
+			<field name="m_codeValidation"/>
+			<field name="m_codeValidationComplementaire"/>
+			<field name="m_nbJoursNonConsoDelaiDechance"/>
+			<field name="m_djtp" embedded="true"/>
+			<field name="m_referenceReglementaireAffiliationDroitCourant"/>
+			<field name="m_dureeTheoriqueDroitCourant"/>
+			<field name="m_dateFinDelaiDecheance" embedded="true"/>
+			<field name="m_origineDecision"/>
+			<field name="m_capitalOdPrecedente"/>
+			<field name="m_capitalOdCourante"/>
+			<field name="m_typeChomageSaisonnier"/>
+			<field name="m_capitalDroitPrecedentSp"/>
+			<field name="m_dateTheoriqueFinDroit" embedded="true"/>
+			<field name="m_plus100trimestres"/>
+			<field name="m_dureeTheoriqueDroitRetenu"/>
+			<field name="m_referenceReglementaireAffiliationDroitRetenu"/>
+			<field name="m_idGaecPeriodeFg"/>
+			<field name="m_idGaecPeriodeRa"/>
+			<field name="m_fctRetenueOD" embedded="true"/>
+			<field name="m_motifFctRetenueOD"/>
+			<field name="m_dateDerniereFctDansDelaiForclusion" embedded="true"/>
+			<field name="m_motifDerniereFctDansDelaiForclusion"/>
+			<field name="m_complementSs"/>
+			<field name="m_regimeSs"/>
+			<field name="m_codeQualification"/>
+			<field name="m_codeQualificationDroitCourant"/>
+			<field name="m_codeMetier"/>
+			<field name="m_codeMetierDroitCourant"/>
+			<field name="m_contexteLiquidation"/>
+			<field name="m_prcSjrForces"/>
+			<field name="m_dateDebutPrcDroitCourant" embedded="true"/>
+			<field name="m_dateFinPrcDroitCourant" embedded="true"/>
+			<field name="m_montantSjrCourantNonPlafonne"/>
+			<field name="m_montantSjrCourantCalculePlafonne"/>
+			<field name="m_montantSjrCourantPlafonne"/>
+			<field name="m_montantSalaireReferenceSjrCourant"/>
+			<field name="m_nbJoursDiviseurSjrCourant"/>
+			<field name="m_nbHeuresTravailleesA8A10SjrCourant"/>
+			<field name="m_coeffTempsPartielSjrCourant"/>
+			<field name="m_coeffSaisonnierCalcSjrCourant"/>
+			<field name="m_coeffSaisonnierForceSjrCourant"/>
+			<field name="m_finPrcSjrRetenu" embedded="true"/>
+			<field name="m_montantSjrRetenuPlafonne"/>
+			<field name="m_dateEffetSjc" embedded="true"/>
+			<field name="m_montantSjc"/>
+			<field name="m_nbJoursIccp"/>
+			<field name="m_uniteDureeIccp"/>
+			<field name="m_dateDebutIccp" embedded="true"/>
+			<field name="m_dateFinIccp" embedded="true"/>
+			<field name="m_nbJoursIslr"/>
+			<field name="m_uniteDureeIslr"/>
+			<field name="m_dateDebutIslr" embedded="true"/>
+			<field name="m_dateFinIslr" embedded="true"/>
+			<field name="m_montantIslr"/>
+			<field name="m_nbJoursDiffere"/>
+			<field name="m_uniteDureeDiffere"/>
+			<field name="m_dateDebutDiffere" embedded="true"/>
+			<field name="m_dateFinDiffere" embedded="true"/>
+			<field name="m_reglementApplicableCourant"/>
+			<field name="m_reglementApplicableRetenu"/>
+			<field name="m_flagReadmission"/>
+			<field name="m_montantInitialCapitalMax"/>
+			<field name="m_regimeParticulier"/>
+			<field name="m_identifiantDemandeCali"/>
+			<field name="m_typeAerDroitCourant"/>
+			<field name="m_typeAerDroitRetenu"/>
+			<field name="m_identifiantOuvertureDroitAttributionPrecedente"/>
+			<field name="m_nbJoursActiviteCourrierASS"/>
+			<field name="m_montantCarenceIccp"/>
+			<field name="m_codeSousProduitCourant"/>
+			<field name="m_codeSousProduitRetenu"/>
+			<field name="m_nombreHeureTravailleEtendu"/>
+			<field name="m_rangAllongementPRA"/>
+			<field name="m_situationParticuliereDroitCourant"/>
+			<field name="m_situationParticuliereDroitRetenu"/>
+			<field name="m_codeActiviteHorsFrance"/>
+			<field name="m_codePaysActivite"/>
+			<field name="m_montantSalaireReferenceA10FNA"/>
+			<field name="m_rangAttributionAFDFiliereFNA"/>
+			<field name="m_typeFinancement"/>
+			<field name="m_nbMoisRemboursesCoordEuropeenne"/>
+			<field name="m_numeroConvention"/>
+			<field name="m_codeAffectationConvention"/>
+			<field name="m_idExterneEmployeurSp"/>
+			<field name="m_fctEmployeurCompetent"/>
+			<field name="m_dateLimiteIndemnisation" embedded="true"/>
+			<field name="m_auMoinsUneActiviteConservee"/>
+			<field name="m_estDroitOption"/>
+			<field name="m_estDroitApprenti"/>
+			<field name="m_nbJourEcretementPlafDuree"/>
+			<field name="m_deltaDiffereSpectacle"/>
+			<field name="m_montantAllocationJournaliereBrut"/>
+			<field name="m_estDroitInterimaire"/>
+			<field name="m_dureeAllongementAref"/>
+			<field name="m_collectionPeriodeAffiliation">
+				<collection element-type="fr.unedic.cali.dom.pivot.pc.PeriodeAffiliationPC"/>
+			</field>
+		</class>
+		<class name="DecisionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_referenceExterneDemande"/>
+			<field name="m_classementAdministratif"/>
+			<field name="m_natureDecision"/>
+			<field name="m_datePriseDecision" embedded="true"/>
+			<field name="m_dateEffetDecision" embedded="true"/>
+			<field name="m_dateExamen" embedded="true"/>
+			<field name="m_dateFctFG" embedded="true"/>
+			<field name="m_origineDecision"/>
+			<field name="m_codeValidation"/>
+			<field name="m_codeReexamen"/>
+			<field name="m_oldTypeExamen"/>
+			<field name="m_typeExamen"/>
+			<field name="m_dateValidationDecision" embedded="true"/>
+			<field name="m_codeProduit"/>
+			<field name="m_uniteAffiliation"/>
+			<field name="m_valeurQuantiteAffiliation"/>
+			<field name="m_uniteAffiliation2"/>
+			<field name="m_valeurQuantiteAffiliation2"/>
+			<field name="m_nbJoursAppartenance"/>
+			<field name="m_competenceAdministrative"/>
+			<field name="m_dateFctRetenue" embedded="true"/>
+			<field name="m_motifRejet"/>
+			<field name="m_identifiantDemandeCali"/>
+			<field name="m_topLiquidationEnEtat"/>
+			<field name="m_dateFinPmc" embedded="true"/>
+			<field name="m_typePmc"/>
+			<field name="m_valeurQuantiteAssimilation"/>
+			<field name="m_situationParticuliere"/>
+			<field name="m_codeSousProduit"/>
+			<field name="m_nbHFormationProfessionnelleAssimiliees"/>
+			<field name="m_nbHEnseignementDispenseesAssimilees"/>
+			<field name="m_nbHMaladieAssimilees"/>
+			<field name="m_nbHMaterniteAssimilees"/>
+			<field name="m_nbHTravailHorsA8A10"/>
+			<field name="m_dateDebutPra" embedded="true"/>
+			<field name="m_dateFinPra" embedded="true"/>
+			<field name="m_valeurQuantiteAffiliationRequise"/>
+			<field name="m_uniteAffiliationRequise"/>
+			<field name="m_valeurQuantiteAffiliationRequise2"/>
+			<field name="m_uniteAffiliationRequise2"/>
+			<field name="m_periodeTheoriqueRechercheAffiliation"/>
+			<field name="m_dateFinDecheance" embedded="true"/>
+			<field name="m_etablissementFinanceur"/>
+			<field name="m_idExterneEmployeurSp"/>
+			<field name="m_dateDebutEvenement" embedded="true"/>
+			<field name="m_dateFinEvenement" embedded="true"/>
+			<field name="m_nbJoursAffiImputes"/>
+			<field name="m_etatPndsPourCalculAffiliation"/>
+			<field name="m_modeTraitementDemandeNPDE"/>
+			<field name="m_codeSousProduitRejet"/>
+		</class>
+		<class name="AidesPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_rangAide"/>
+			<field name="m_typeAide"/>
+			<field name="m_montantTotalPaye"/>
+			<field name="m_etat"/>
+			<field name="m_dateValidationANPE" embedded="true"/>
+			<field name="m_dateValidationAssedic" embedded="true"/>
+			<field name="m_anneeAffectation"/>
+			<field name="m_montantTotalEngageFraisP"/>
+			<field name="m_montantFraisRestantStagiaireFraisP"/>
+			<field name="m_montantCoutStageFraisP"/>
+			<field name="m_beneficiaireAideFraisP"/>
+			<field name="m_montantFraisRestantStagiaireNonPlafonneFraisP"/>
+			<field name="m_montantTotalEngageFraisT"/>
+			<field name="m_montantTotalEngageFraisH"/>
+			<field name="m_montantTotalEngageFraisR"/>
+			<field name="m_identifiantActionFormation"/>
+			<field name="m_identifiantConvention"/>
+			<field name="m_etatDemande"/>
+			<field name="m_typeActionReclassement"/>
+			<field name="m_montantAideDerogatoire"/>
+			<field name="m_montantBonTransport"/>
+			<field name="m_dateLimiteIndemnisation" embedded="true"/>
+			<field name="m_plafondDerogatoireAvantAide"/>
+			<field name="m_plafondAvantAide"/>
+			<field name="m_motifEchec"/>
+			<field name="m_situationMobilite"/>
+			<field name="m_dateDebutActionReclassement" embedded="true"/>
+			<field name="m_typeDerogation"/>
+			<field name="m_dateFinActionReclassement" embedded="true"/>
+			<field name="m_codeProduit"/>
+			<field name="m_referenceExterne"/>
+			<field name="m_libelleDerogatoire"/>
+			<field name="m_typeBon"/>
+			<field name="m_numeroBon"/>
+			<field name="m_clefControleBon"/>
+			<field name="m_montantBonEnLettres"/>
+			<field name="m_origineDemande"/>
+			<field name="m_typeDemandeWeb"/>
+			<field name="m_gareAllerDepart"/>
+			<field name="m_gareAllerArrivee"/>
+			<field name="m_collectionPeriodeLieu">
+				<collection element-type="fr.unedic.cali.dom.pivot.pc.PeriodeLieuPC"/>
+			</field>
+			<field name="m_collectionDerogation">
+				<collection element-type="fr.unedic.cali.dom.pivot.pc.DerogationPC"/>
+			</field>
+		</class>
+		<class name="PeriodeLieuPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantPlanFormation"/>
+			<field name="m_idPeriodeFormation"/>
+			<field name="m_dateDebutPeriode" embedded="true"/>
+			<field name="m_typeFrais"/>
+			<field name="m_dateFinPeriode" embedded="true"/>
+			<field name="m_lieuFormation"/>
+			<field name="m_nbJoursPresenceStage"/>
+			<field name="m_priseEnComptePlafondMajore"/>
+			<field name="m_nbAR"/>
+			<field name="m_montantUnitaireAR"/>
+			<field name="m_nombreKmAR"/>
+			<field name="m_montantUnitaireNuit"/>
+			<field name="m_nbNuits"/>
+			<field name="m_montantUnitaireRepas"/>
+			<field name="m_nbRepas"/>
+			<field name="m_hebergementChargeStagiaire"/>
+			<field name="m_montantNuite"/>
+			<field name="m_codeProduit"/>
+		</class>
+		<class name="AidesNcpPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantBanalise1"/>
+			<field name="m_identifiantBanalise2"/>
+			<field name="m_identifiantBanalise3"/>
+			<field name="m_dateBanalisee1" embedded="true"/>
+			<field name="m_dateBanalisee2" embedded="true"/>
+			<field name="m_dateBanalisee3" embedded="true"/>
+			<field name="m_dateBanalisee4" embedded="true"/>
+			<field name="m_dateBanalisee5" embedded="true"/>
+			<field name="m_libelleBanalise1"/>
+			<field name="m_libelleBanalise2"/>
+			<field name="m_libelleBanalise3"/>
+			<field name="m_libelleBanalise4"/>
+			<field name="m_libelleBanalise5"/>
+			<field name="m_nbJoursBanalise1"/>
+			<field name="m_nbJoursBanalise2"/>
+			<field name="m_nbJoursBanalise3"/>
+			<field name="m_capitalBanalise1"/>
+			<field name="m_capitalBanalise2"/>
+			<field name="m_capitalBanalise3"/>
+		</class>
+		<class name="PeriodeAffiliationPC" identity-type="datastore">
+			<field name="m_identifiantPeriode"/>
+			<field name="m_dateDebut" embedded="true"/>
+			<field name="m_dateFin" embedded="true"/>
+			<field name="m_qualification"/>
+			<field name="m_type"/>
+			<field name="m_competenceFinanciere"/>
+			<field name="m_competenceAdministrative"/>
+			<field name="m_identifiantOD"/>
+			<field name="m_referenceExterneDemande"/>
+		</class>
+		<class name="DerogationPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_natureDerogation"/>
+			<field name="m_typeDerogation"/>
+		</class>
+	</package>
+</jdo>

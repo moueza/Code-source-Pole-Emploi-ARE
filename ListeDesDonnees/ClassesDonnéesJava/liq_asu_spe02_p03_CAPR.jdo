@@ -1,0 +1,36 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.spe02.p03.liquidation.dom.pc">
+		<class name="ConditionsAttributionReprisePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_presenceDonneesConditionRechercheEmploi"/>
+			<field name="m_etatConditionRechercheEmploi"/>
+			<field name="m_codeMotifEchecConditionRechercheEmploi"/>
+			<field name="m_presenceDonneesConditionAdhesionDispositif"/>
+			<field name="m_etatConditionAdhesionDispositif"/>
+			<field name="m_codeMotifEchecConditionAdhesionDispositif"/>
+			<field name="m_presenceDonneesConditionAge"/>
+			<field name="m_etatConditionAge"/>
+			<field name="m_codeMotifEchecConditionAge"/>
+			<field name="m_datePensionRetraiteConditionAge" embedded="true"/>
+			<field name="m_ageDateAttributionConditionAge" embedded="true"/>
+			<field name="m_presenceDonneesConditionChomageInvolontaire"/>
+			<field name="m_etatConditionChomageInvolontaire"/>
+			<field name="m_codeMotifEchecConditionChomageInvolontaire"/>
+			<field name="m_quantiteAffiliationChomageInvolontaire" embedded="true"/>
+			<field name="m_presenceDonneesConditionCumulPrestationFamiliale"/>
+			<field name="m_etatConditionCumulPrestationFamiliale"/>
+			<field name="m_codeMotifEchecConditionCumulPrestationFamiliale"/>
+			<field name="m_presenceDonneesConditionMontantNonNul"/>
+			<field name="m_etatConditionMontantNonNul"/>
+			<field name="m_codeMotifEchecConditionMontantNonNul"/>
+			<field name="m_presenceDonneesConditionValiditeReliquat"/>
+			<field name="m_etatConditionValiditeReliquat"/>
+			<field name="m_codeMotifEchecConditionValiditeReliquat"/>
+			<field name="m_dateDecheanceConditionValiditeReliquat" embedded="true"/>
+			<field name="m_motifNonValiditeConditionValiditeReliquat"/>
+			<field name="m_causeExtinctionConditionValiditeReliquat"/>
+		</class>
+	</package>
+</jdo>

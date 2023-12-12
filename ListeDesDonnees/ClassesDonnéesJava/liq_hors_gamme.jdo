@@ -1,0 +1,128 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.transverse.dom.spec">
+		<interface name="DomPCSpec"/>
+	</package>
+	<package name="fr.unedic.cali.dom">
+		<interface name="DemandeGeneriqueSpec"/>
+	</package>
+	<package name="fr.unedic.cali.dom.pc">
+		<class name="IndividuImplPersistantPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_estMigree"/>
+			<field name="m_dateBlocageIndemnisationConflitGAEC" embedded="true"/>
+			<field name="m_codeTransfert"/>
+			<field name="m_investigationFraude"/>
+			<field name="m_dateExecutionDifferee" embedded="true"/>
+			<field name="m_forcageAppelGaecTotal"/>
+			<field name="m_domaineSrcFlux"/>
+			<field name="m_codeTransaction"/>
+			<field name="m_attributionsAfdFiliereCourte"/>
+			<field name="m_attributionsAfdFiliereIntermediaire"/>
+			<field name="m_attributionsAfdFiliereLongue"/>
+			<field name="m_dernierJourIndemnisableAreSpe" embedded="true"/>
+			<field name="m_origineSaisieDernierJourIndemnisableAreSpe"/>
+			<field name="m_estAbonneGaec"/>
+			<field name="m_estArretReexecution"/>
+			<field name="m_estNonExecutionReceptionFlux"/>
+			<field name="m_estDesactEFE"/>
+			<field name="m_dateLimiteReexecution" embedded="true"/>
+			<field name="m_dernierDjaNotifieAss" embedded="true"/>
+						<field name="m_dateExamenRejetDV" embedded="true"/>
+			<field name="m_collectionPeriodesActiviteSalariee">
+				<collection element-type="fr.unedic.cali.autresdoms.ga.dom.pc.ActiviteSalariePC"/>
+			</field>
+			<field name="m_collectionDemandes">
+				<collection element-type="fr.unedic.cali.dom.DemandeGeneriqueSpec"/>
+			</field>
+			<field name="m_collectionStatistiqueExamenAuFilEau">
+				<collection element-type="fr.unedic.cali.dom.pc.StatistiqueExamenAuFilEauPC"/>
+			</field>
+			<field name="m_preInscription">
+				<collection element-type="fr.unedic.cali.dom.pc.PreInscriptionPC"/>
+			</field>
+		</class>
+		<class name="PeriodeActiviteSalarieCaliPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_estLiquidable"/>
+			<field name="m_estFctPrincipale"/>
+		</class>
+		<class name="ClassementAdministratifPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ClassementSansObjetPC" persistence-capable-superclass="fr.unedic.cali.dom.pc.ClassementAdministratifPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ClassementSansSuitePC" persistence-capable-superclass="fr.unedic.cali.dom.pc.ClassementAdministratifPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_motif"/>
+		</class>
+		<class name="PrescriptionPC" persistence-capable-superclass="fr.unedic.cali.dom.pc.ClassementAdministratifPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_validite"/>
+			<field name="m_motifRejetPrescription"/>
+		</class>
+		<class name="ClassementCompetenceSecteurPublicPC" persistence-capable-superclass="fr.unedic.cali.dom.pc.ClassementAdministratifPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_motifNotification"/>
+			<field name="m_employeurCompetent"/>
+		</class>
+		<class name="ClassementDepotTardifPC" persistence-capable-superclass="fr.unedic.cali.dom.pc.ClassementAdministratifPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="TestProductionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateJour" embedded="true"/>
+		</class>
+		<class name="StatistiqueExamenAuFilEauPC" identity-type="datastore">
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_dateEvenementDeclencheur" embedded="true"/>
+			<field name="m_natureDeclencheur"/>
+			<field name="m_datePremiereFctEtudiee" embedded="true"/>
+			<field name="m_datePremiereFctEtudieeSansAffiSimplifiee" embedded="true"/>
+			<field name="m_dateDerniereFctEtudiee" embedded="true"/>
+			<field name="m_nombreTotalFctEtudiees"/>
+			<field name="m_resultatExamen"/>
+		</class>
+		<class name="ActionFormationLieePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateDebut" embedded="true"/>
+			<field name="m_dateDebutPeriodeFormation" embedded="true"/>
+			<field name="m_dateFin" embedded="true"/>
+			<field name="m_datePrescription" embedded="true"/>
+			<field name="m_numeroConvention"/>
+			<field name="m_statutFormation"/>
+			<field name="m_typeConvention"/>
+			<field name="m_typePopulationRsa"/>
+			<field name="m_identifiantConvention"/>
+			<field name="m_affDerogatoire"/>
+			<field name="m_typePlanFormation"/>
+			<field name="m_quantiteHebdomadaire" embedded="true"/>
+		</class>
+		<class name="ContexteDemandePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_typeContexteDemande"/>
+			<field name="m_sousTypeContexteDemande"/>
+			<field name="m_identifiantPeriodeCaliJustifContexte"/>
+			<field name="m_dateDebutJustifContexte" embedded="true"/>
+			<field name="m_dateFinJustifContexte" embedded="true"/>
+		</class>
+		<class name="DemandeAbstraitePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<implements name="fr.unedic.cali.dom.DemandeGeneriqueSpec"/>
+		</class>
+		<class name="ResultatElementDroitPC">
+			<field name="m_codeMotifEchec"/>
+			<field name="m_etat"/>
+		</class>
+	</package>
+	<package name="fr.unedic.cali.autresdoms.ga.dom.pc">
+		<class name="ActiviteSalariePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiant"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_periodeActiviteSalarieCali"/>
+		</class>
+	</package>
+</jdo>

@@ -1,0 +1,235 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc">
+		<class name="CarencePrefixeAFixerPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantPeriodeOrigine"/>
+			<field name="m_periodeApplicationCarence" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+			<field name="m_dateFinPeriodeOrigine" embedded="true"/>
+		</class>
+		<class name="CarenceIccpPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.CarencePrefixeAFixerJourPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_ensembleCarences"/>
+		</class>
+		<class name="CarenceIslrPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.CarencePrefixeAFixerJourPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_ensembleCarences"/>
+		</class>
+		<class name="CarencePrefixeAFixerJourPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.CarencePrefixeAFixerPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ConstitutionCaractereSaisonnierPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_caractereSaisonnierRetenu"/>
+			<field name="m_typeCaractereSaisonnierRetenu"/>
+			<field name="m_periodeReferenceSaisonnier" embedded="true"/>
+			<field name="m_periodeRechercheActiviteSaisonniere" embedded="true"/>
+			<field name="m_activite3Sur5"/>
+			<field name="m_listePeriodesChomageSaisonnier">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeChomageSaisonnierPC"/>
+			</field>
+		</class>
+		<class name="ConstitutionCoefficientSaisonnierPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_coefficientSaisonnierRetenu"/>
+			<field name="m_jourActiviteDouzeDerniersMois" embedded="true"/>
+		</class>
+		<class name="ConstitutionCoefficientTempsPartielPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_coefficientTempsPartielRetenu"/>
+		</class>
+		<class name="ConstitutionDateAttributionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateAttribution" embedded="true"/>
+		</class>
+		<class name="ConstitutionDelaisPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periodeReference91jours" embedded="true"/>
+			<field name="m_nbJoursPMC"/>
+			<field name="m_debutPMC" embedded="true"/>
+			<field name="m_termePMC" embedded="true"/>
+			<field name="m_nbJoursCarenceICCP"/>
+			<field name="m_debutCarenceICCP" embedded="true"/>
+			<field name="m_termeCarenceICCP" embedded="true"/>
+			<field name="m_nbJoursCarenceISLR"/>
+			<field name="m_debutCarenceISLR" embedded="true"/>
+			<field name="m_termeCarenceISLR" embedded="true"/>
+			<field name="m_nbJoursCarenceDiffere"/>
+			<field name="m_debutCarenceDiffere" embedded="true"/>
+			<field name="m_termeCarenceDiffere" embedded="true"/>
+			<field name="m_typePmc"/>
+			<field name="m_collectionEnsembleCarences">
+				<collection element-type="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.EnsembleCarencesPC"/>
+			</field>
+			<field name="m_listeDelaisReports">
+				<collection element-type="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DifferePC"/>
+			</field>
+		</class>
+		<class name="ConstitutionDureesPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_listeDurees">
+				<collection element-type="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DureeReglementairePC"/>
+			</field>
+		</class>
+		<class name="ConstitutionProduitResultantPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_montantDroitPrecedent" embedded="true"/>
+			<field name="m_capitalDroitPrecedent" embedded="true"/>
+			<field name="m_dureeDroitPrecedent" embedded="true"/>
+			<field name="m_sjrrpProduitPrecedent" embedded="true"/>
+			<field name="m_constitutionDurees"/>
+			<field name="m_constitutionMontantsBrutsDroitPrecedent"/>
+		</class>
+		<class name="ConstitutionElementsAdmissionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_constitutionDurees"/>
+			<field name="m_constitutionSjr"/>
+			<field name="m_constitutionDelais"/>
+			<field name="m_constitutionSjc"/>
+			<field name="m_constitutionQuantiteAffiliation"/>
+			<field name="m_constitutionReglementApplicable"/>
+			<field name="m_constitutionDateAttribution"/>
+			<field name="m_constitutionMontantsBruts"/>
+			<field name="m_constitutionPointDepartIndemnisation"/>
+			<field name="m_constitutionCaractereSaisonnier"/>
+			<field name="m_constitutionCoefficientSaisonnier"/>
+			<field name="m_constitutionCoefficientTempsPartiel"/>
+			<field name="m_constitutionProduitResultant"/>
+		</class>
+		<class name="ConstitutionSjcPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_sjcrp" embedded="true"/>
+			<field name="m_sjcip"/>
+		</class>
+		<class name="ConstitutionSjrPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_sjrrp" embedded="true"/>
+			<field name="m_codeEmploiA2b"/>
+			<field name="m_sommeMontantRevision"/>
+			<field name="m_sjrip"/>
+			<field name="m_justificationSjr"/>
+		</class>
+		<class name="JustificationSjrPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_justificationSr"/>
+		</class>
+		<class name="JustificationSrPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_totalSalairesRetenus"/>
+			<field name="m_totalPrimesNormalesRetenues"/>
+			<field name="m_totalPrimesExceptionnellesRetenues"/>
+			<field name="m_salaireReferenceNonPlafonne"/>
+		</class>
+		<class name="ConstitutionMontantsBrutsPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_montantJournalierBrut" embedded="true"/>
+			<field name="m_capitalInitialBrut" embedded="true"/>
+			<field name="m_montantMini" embedded="true"/>
+			<field name="m_montantPlancher" embedded="true"/>
+			<field name="m_montantPlafond" embedded="true"/>
+			<field name="m_montantBase" embedded="true"/>
+			<field name="m_pensionInvaliditeADeduirePriseEnCompte" embedded="true"/>
+			<field name="m_montantBrutSansPensionInvaliditeADeduire" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesse" embedded="true"/>
+			<field name="m_montantJournalierAvantageVieillesseDeduit" embedded="true"/>
+			<field name="m_crc" embedded="true"/>
+			<field name="m_sjrMontantMaxAsp"/>
+		</class>
+		<class name="ConstitutionPointDepartIndemnisationPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_pji" embedded="true"/>
+		</class>
+		<class name="DureeReglementairePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dureeEffective" embedded="true"/>
+		</class>
+		<class name="DureeIndemnisationPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DureeReglementairePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dureeTheorique" embedded="true"/>
+			<field name="m_dureeImputation" embedded="true"/>
+			<field name="m_dureePostPrimeCspConstitutionDurees" embedded="true"/>
+			<field name="m_dureeImputationPostPrime"/>
+		</class>
+		<class name="DureeRenouvellementPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.DureeReglementairePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="EnsembleCarencesPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_pmcIndemnisable"/>
+			<field name="m_carencePmc"/>
+			<field name="m_carenceIccp"/>
+			<field name="m_carenceIslr"/>
+		</class>
+		<class name="PreavisMesureConservatoireIndemnisablePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantPeriodeOrigine"/>
+			<field name="m_periodeApplicationPMC" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+			<field name="m_dateFinPeriodeOrigine" embedded="true"/>
+			<field name="m_ensembleCarences"/>
+		</class>
+		<class name="PreavisMesureConservatoireNonIndemnisablePC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.CarencePrefixeAFixerJourPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_ensembleCarences"/>
+		</class>
+		<class name="PrcPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dureePrc"/>
+			<field name="m_nombreJourAbsence"/>
+			<field name="m_diviseur"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_prip" embedded="true"/>
+			<field name="m_nombreHeuresTotal"/>
+			<field name="m_srip"/>
+			<field name="m_nombreJourDeductible"/>
+			<field name="m_nombreJourInappartenance"/>
+			<field name="m_nombreJourTravailEffectif"/>
+			<field name="m_nombreHeuresA4ouA5"/>
+			<field name="m_droitCongesA4ouA5"/>
+			<field name="m_topContratsDeTypeParticulier"/>
+		</class>
+		<class name="PrcSjcPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.PrcPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="PrcSjrPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.PrcPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ConstitutionQuantiteAffiliationPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dureeInitiale" embedded="true"/>
+			<field name="m_quantiteAffiliationAcquise" embedded="true"/>
+			<field name="m_quantiteAssimilationAcquise" embedded="true"/>
+			<field name="m_article3"/>
+			<field name="m_periodePRA" embedded="true"/>
+		</class>
+		<class name="ConstitutionReglementApplicablePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_nomReglement"/>
+			<field name="m_codeProduit"/>
+		</class>
+		<class name="SjcipPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_plafond" embedded="true"/>
+			<field name="m_sjcInitial" embedded="true"/>
+			<field name="m_listeSjrActiviteConservee">
+				<collection element-type="fr.unedic.cali.asu.cge01.p02.liquidation.dom.pc.SjrActiviteConserveePC"/>
+			</field>
+		</class>
+		<class name="SjrActiviteConserveePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_sjrInitial" embedded="true"/>
+			<field name="m_identifiantPeriodeActiviteConservee"/>
+			<field name="m_prc"/>
+		</class>
+		<class name="SjripPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_plafondSjr" embedded="true"/>
+			<field name="m_sjrInitial" embedded="true"/>
+			<field name="m_prc"/>
+		</class>
+	</package>
+</jdo>

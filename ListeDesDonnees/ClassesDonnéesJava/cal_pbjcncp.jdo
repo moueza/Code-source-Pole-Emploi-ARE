@@ -1,0 +1,281 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.calcul.pbjc.dom.pc">
+		<class name="PbjcNcpPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateDebutPbjc" embedded="true"/>
+			<field name="m_dateFinPbjc" embedded="true"/>
+			<field name="m_refOdPjcPremierFaitGenerateur"/>
+			<field name="m_refOdPjcFaitGenerateurOrigine"/>
+			<field name="m_identifiantReprise"/>
+			<field name="m_refBaseCalculMontantBrut"/>
+			<field name="m_produit"/>
+			<field name="m_etatReglementaireOd"/>
+			<field name="m_etatAdministratifOd"/>
+			<field name="m_rangProlongation"/>
+			<field name="m_naturePBJC"/>
+			<field name="m_codeRadiationLendemainPeriode"/>
+			<field name="m_nbJoursImputes"/>
+			<field name="m_nbJoursDecalage"/>
+			<field name="m_cumulCourant"/>
+			<field name="m_reliquatDureeMax"/>
+			<field name="m_reliquatDureeReglementaire"/>
+			<field name="m_justificationCalculMontant"/>
+			<field name="m_regimeApplicable"/>
+			<field name="m_typeCarence"/>
+			<field name="m_montantSalaireRevalorisePlafonne"/>
+			<field name="m_montantSjc"/>
+			<field name="m_coefficientTempsPartiel"/>
+			<field name="m_montantRessourceMensuel"/>
+			<field name="m_rangActualisationRessources"/>
+			<field name="m_anneePerceptionRessources"/>
+			<field name="m_moisPerceptionRessources"/>
+			<field name="m_coefAvantageVieillesse"/>
+			<field name="m_montantCumuleRevaloriseAV"/>
+			<field name="m_idPlanFormation"/>
+			<field name="m_typeDePlan"/>
+			<field name="m_idStageFormation"/>
+			<field name="m_typeMesurePourLEmploi"/>
+			<field name="m_codeEtatPND"/>
+			<field name="m_montantBaseJustificatifPND"/>
+			<field name="m_statutPaiement"/>
+			<field name="m_montantPensionInvalidite"/>
+			<field name="m_interrupIndemParPensionInvalidite"/>
+			<field name="m_plafonnementFTHR"/>
+			<field name="m_priseEnChargeAERC"/>
+			<field name="m_codeMotifNonPaiement"/>
+			<field name="m_dateDebutInterrupRess" embedded="true"/>
+			<field name="m_nbMoisActiviteReduite"/>
+			<field name="m_cumulHeureActRed"/>
+			<field name="m_nbMoisPaiementProvis"/>
+			<field name="m_aleIndividu"/>
+			<field name="m_txSanction"/>
+			<field name="m_topApplicationCRC"/>
+			<field name="m_topPlafonnementDureeDroitParDate"/>
+			<field name="m_nbJoursAREF"/>
+			<field name="m_complementDeJustification0"/>
+			<field name="m_complementDeJustification1"/>
+			<field name="m_complementDeJustification2"/>
+			<field name="m_complementDeJustification3"/>
+			<field name="m_complementDeJustification4"/>
+			<field name="m_complementDeJustification5"/>
+			<field name="m_complementDeJustification6"/>
+			<field name="m_complementDeJustification7"/>
+			<field name="m_complementDeJustification8"/>
+			<field name="m_complementDeJustification9"/>
+			<field name="m_codeTypeMontant1"/>
+			<field name="m_complementTypeMontant1"/>
+			<field name="m_assiette1"/>
+			<field name="m_baseDeCalcul1"/>
+			<field name="m_taux1"/>
+			<field name="m_resultatCalcul1"/>
+			<field name="m_positionExoneration1"/>
+			<field name="m_codeTypeMontant2"/>
+			<field name="m_complementTypeMontant2"/>
+			<field name="m_assiette2"/>
+			<field name="m_baseDeCalcul2"/>
+			<field name="m_taux2"/>
+			<field name="m_resultatCalcul2"/>
+			<field name="m_positionExoneration2"/>
+			<field name="m_codeTypeMontant3"/>
+			<field name="m_complementTypeMontant3"/>
+			<field name="m_assiette3"/>
+			<field name="m_baseDeCalcul3"/>
+			<field name="m_taux3"/>
+			<field name="m_resultatCalcul3"/>
+			<field name="m_positionExoneration3"/>
+			<field name="m_codeTypeMontant4"/>
+			<field name="m_complementTypeMontant4"/>
+			<field name="m_assiette4"/>
+			<field name="m_baseDeCalcul4"/>
+			<field name="m_taux4"/>
+			<field name="m_resultatCalcul4"/>
+			<field name="m_positionExoneration4"/>
+			<field name="m_codeTypeMontant5"/>
+			<field name="m_complementTypeMontant5"/>
+			<field name="m_assiette5"/>
+			<field name="m_baseDeCalcul5"/>
+			<field name="m_taux5"/>
+			<field name="m_resultatCalcul5"/>
+			<field name="m_positionExoneration5"/>
+			<field name="m_codeTypeMontant6"/>
+			<field name="m_complementTypeMontant6"/>
+			<field name="m_assiette6"/>
+			<field name="m_baseDeCalcul6"/>
+			<field name="m_taux6"/>
+			<field name="m_resultatCalcul6"/>
+			<field name="m_positionExoneration6"/>
+			<field name="m_codeTypeMontant7"/>
+			<field name="m_complementTypeMontant7"/>
+			<field name="m_assiette7"/>
+			<field name="m_baseDeCalcul7"/>
+			<field name="m_taux7"/>
+			<field name="m_resultatCalcul7"/>
+			<field name="m_positionExoneration7"/>
+			<field name="m_situationParticuliere"/>
+			<field name="m_categorie"/>
+			<field name="m_typeDispositif"/>
+			<field name="m_codePays"/>
+			<field name="m_typePopulation1"/>
+			<field name="m_sousTypePopulation1"/>
+			<field name="m_statutPrestation1"/>
+			<field name="m_typePopulation2"/>
+			<field name="m_sousTypePopulation2"/>
+			<field name="m_statutPrestation2"/>
+			<field name="m_typePopulation3"/>
+			<field name="m_sousTypePopulation3"/>
+			<field name="m_statutPrestation3"/>
+			<field name="m_typePopulation4"/>
+			<field name="m_sousTypePopulation4"/>
+			<field name="m_statutPrestation4"/>
+			<field name="m_typePopulation5"/>
+			<field name="m_sousTypePopulation5"/>
+			<field name="m_statutPrestation5"/>
+			<field name="m_presencePnds"/>
+			<field name="m_montantContMensuelEmploiRepris"/>
+			<field name="m_excedentsRemunerationMois"/>
+			<field name="m_cumulAllongementPlan"/>
+			<field name="m_nbJoursAllongementAREF"/>
+			<field name="m_reliquatAllongementAREF"/>
+		</class>
+		<class name="IndividuPbjcNcpPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateDerniereExecCal" embedded="true"/>
+			<field name="m_heureDerniereExecCal"/>
+			<field name="m_dateDerniereDemCal" embedded="true"/>
+			<field name="m_heureDerniereDemCal"/>
+			<field name="m_dernierJourIndemnisable" embedded="true"/>
+			<field name="m_dateDepartRetraiteCalculee" embedded="true"/>
+			<field name="m_codeJustifRetraite"/>
+			<field name="m_etatDerniereExecution"/>
+			<field name="m_codeAnomalieCalcul"/>
+			<field name="m_donneeAnomalieCalcul"/>
+			<field name="m_contexteExecution"/>
+			<field name="m_nombreTrimestreRetraite"/>
+			<field name="m_dateAtteinteMoisNonPaye" embedded="true"/>
+			<field name="m_dateDebutIneligibiliteAidesMob" embedded="true"/>
+			<field name="m_dateFinIneligibiliteAidesMob" embedded="true"/>
+		</class>
+		<class name="DroitPbjcNcpPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identOuvertureDroit"/>
+			<field name="m_dateEffetMaintien" embedded="true"/>
+			<field name="m_dateEffetExclusionDef" embedded="true"/>
+			<field name="m_dateFinDeDroit" embedded="true"/>
+			<field name="m_dateEffetPjiMaintienEESSI" embedded="true"/>
+			<field name="m_dateEffetIdeMaintienEESSI" embedded="true"/>
+			<field name="m_dateEffetDjiMaintienEESSI" embedded="true"/>
+			<field name="m_indicateurMaintienEESSI"/>
+			<field name="m_anneeAffectation"/>
+			<field name="m_dateFinCSP" embedded="true"/>
+			<field name="m_dateDebutDroit" embedded="true"/>
+			<field name="m_montantBrutOd"/>
+			<field name="m_montantPrecompteOd"/>
+			<field name="m_franchiseCPinit"/>
+			<field name="m_reliquatFranchiseCP"/>
+			<field name="m_franchiseSalaireInit"/>
+			<field name="m_reliquatFranchiseSalaire"/>
+			<field name="m_sommeReliquatPlafonee"/>
+		</class>
+		<class name="EnquetePbjcNcpPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identOuvertureDroit"/>
+			<field name="m_dateSituationSuivi" embedded="true"/>
+			<field name="m_typeSituationSuivi"/>
+			<field name="m_codeProduit"/>
+			<field name="m_rangSituation"/>
+			<field name="m_identReprisePorteuse"/>
+			<field name="m_situationAEmettre"/>
+			<field name="m_situationParticuliere"/>
+			<field name="m_codeSousProduit"/>
+		</class>
+		<class name="PrimePbjcNcpPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeProduit"/>
+			<field name="m_dateEffet" embedded="true"/>
+			<field name="m_montant"/>
+			<field name="m_complementMontant1"/>
+			<field name="m_complementMontant2"/>
+			<field name="m_nbJoursReliquatARE"/>
+			<field name="m_odOrigine"/>
+			<field name="m_numeroOrdre"/>
+			<field name="m_codePays"/>
+			<field name="m_typePopulation1"/>
+			<field name="m_sousTypePopulation1"/>
+			<field name="m_statutPrestation1"/>
+			<field name="m_typePopulation2"/>
+			<field name="m_sousTypePopulation2"/>
+			<field name="m_statutPrestation2"/>
+			<field name="m_typePopulation3"/>
+			<field name="m_sousTypePopulation3"/>
+			<field name="m_statutPrestation3"/>
+			<field name="m_typePopulation4"/>
+			<field name="m_sousTypePopulation4"/>
+			<field name="m_statutPrestation4"/>
+			<field name="m_typePopulation5"/>
+			<field name="m_sousTypePopulation5"/>
+			<field name="m_statutPrestation5"/>
+			<field name="m_codeSousProduit"/>
+			<field name="m_tiers"/>
+		</class>
+		<class name="AideNcpPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeProduit"/>
+			<field name="m_dateVersementAide" embedded="true"/>
+			<field name="m_dateDebutAide" embedded="true"/>
+			<field name="m_dateFinAide" embedded="true"/>
+			<field name="m_codeNatureAide"/>
+			<field name="m_siecleAnneeAffectationDecision"/>
+			<field name="m_codeSousProduit1"/>
+			<field name="m_codeNatureDerogatoireSousProduit1"/>
+			<field name="m_nbAidesIndemniseesPeriode1"/>
+			<field name="m_montantUnitaireAide1"/>
+			<field name="m_montantTotalAide1"/>
+			<field name="m_codeSousProduit2"/>
+			<field name="m_codeNatureDerogatoireSousProduit2"/>
+			<field name="m_nbAidesIndemniseesPeriode2"/>
+			<field name="m_montantUnitaireAide2"/>
+			<field name="m_montantTotalAide2"/>
+			<field name="m_codeSousProduit3"/>
+			<field name="m_codeNatureDerogatoireSousProduit3"/>
+			<field name="m_nbAidesIndemniseesPeriode3"/>
+			<field name="m_montantUnitaireAide3"/>
+			<field name="m_montantTotalAide3"/>
+			<field name="m_codeSousProduit4"/>
+			<field name="m_codeNatureDerogatoireSousProduit4"/>
+			<field name="m_nbAidesIndemniseesPeriode4"/>
+			<field name="m_montantUnitaireAide4"/>
+			<field name="m_montantTotalAide4"/>
+			<field name="m_referenceExterne"/>
+			<field name="m_typePopulation1"/>
+			<field name="m_sousTypePopulation1"/>
+			<field name="m_statutPrestation1"/>
+			<field name="m_typePopulation2"/>
+			<field name="m_sousTypePopulation2"/>
+			<field name="m_statutPrestation2"/>
+			<field name="m_typePopulation3"/>
+			<field name="m_sousTypePopulation3"/>
+			<field name="m_statutPrestation3"/>
+			<field name="m_typePopulation4"/>
+			<field name="m_sousTypePopulation4"/>
+			<field name="m_statutPrestation4"/>
+			<field name="m_typePopulation5"/>
+			<field name="m_sousTypePopulation5"/>
+			<field name="m_statutPrestation5"/>
+			<field name="m_idPlanFormation"/>
+			<field name="m_idStageFormation"/>
+			<field name="m_complementTypeMontant1"/>
+			<field name="m_complementTypeMontant2"/>
+			<field name="m_complementTypeMontant3"/>
+			<field name="m_complementTypeMontant4"/>
+			<field name="m_codeSousProduit"/>
+		</class>
+		<class name="DispositifNcpPC" identity-type="datastore">
+			<field name="m_dateDebutDispositif" embedded="true"/>
+			<field name="m_dateFinDispositifAvant" embedded="true"/>
+			<field name="m_dateFinDispositifApres" embedded="true"/>
+			<field name="m_idTracker"/>
+		</class>
+	</package>
+</jdo>

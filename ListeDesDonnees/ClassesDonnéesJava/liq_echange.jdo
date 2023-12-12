@@ -1,0 +1,155 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.dom.echange.pc">
+		<class name="DecisionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantEvenement"/>
+			<field name="m_etatDemande"/>
+			<field name="m_codeSegment"/>
+			<field name="m_referenceExterneDemande"/>
+			<field name="m_gamme"/>
+			<field name="m_ligne"/>
+			<field name="m_typeEchecExamen"/>
+			<field name="m_motifEchec"/>
+			<field name="m_classementAdministratif"/>
+			<field name="m_motifReexamenPrincipal"/>
+			<field name="m_identifiantOd"/>
+			<field name="m_identifiantReprise"/>
+			<field name="m_produit"/>
+			<field name="m_natureDecision"/>
+			<field name="m_origineDecision"/>
+			<field name="m_topContribSupplementaire"/>
+			<field name="m_topContribSpecifique"/>
+			<field name="m_topEchecDemandeExpresseEnCoursIndemnisation"/>
+			<field name="m_topRejetASUReliquatASS"/>
+			<field name="m_topRejetASUCpaASS"/>
+			<field name="m_topDroitOptionAss"/>
+			<field name="m_topIndividuStable"/>
+			<field name="m_indicateurNotificationCourrier"/>
+			<field name="m_montantAllocationJournalierBrutCourrier"/>
+			<field name="m_montantAllocationJournalierNetCourrier"/>
+			<field name="m_montantCrcCourrier"/>
+			<field name="m_dureeTheoriqueDroitServiCourrier"/>
+			<field name="m_dureeRenouvellementAreCourrier"/>
+			<field name="m_montantPensionInvaliditeAreCourrier"/>
+			<field name="m_montantArePourAerComplementCourrier"/>
+			<field name="m_montantForfaitaireMensuelRpsCourrier"/>
+			<field name="m_identifiantActionFormation"/>
+			<field name="m_fraisFthrAvant"/>
+			<field name="m_fraisFpoAvant"/>
+			<field name="m_exerciceAvant"/>
+			<field name="m_exerciceApres"/>
+			<field name="m_statutAvant"/>
+			<field name="m_statutApres"/>
+			<field name="m_fraisFthrApres"/>
+			<field name="m_fraisFpoApres"/>
+			<field name="m_competenceAdministrative"/>
+			<field name="m_topAffDerogatoire"/>
+			<field name="m_libelleEmployeur"/>
+			<field name="m_motifRejet"/>
+			<field name="m_dateTraitement" embedded="true"/>
+			<field name="m_montantSJC"/>
+			<field name="m_montantSJCMax"/>
+			<field name="m_montantAllocation"/>
+			<field name="m_montantAllocationUn"/>
+			<field name="m_montantAllocationDeux"/>
+			<field name="m_topCaisseInconnue"/>
+			<field name="m_dureeImputationAideSurDroit"/>
+			<field name="m_typeAide"/>
+			<field name="m_typeExamen"/>
+			<field name="m_situationParticuliere"/>
+			<field name="m_investigationFraude"/>
+			<field name="m_codeSousProduit"/>
+			<field name="m_dateBanalisee" embedded="true"/>
+			<field name="m_montantSJRSuiteRevision"/>
+			<field name="m_auMoinsUneActiviteConservee"/>
+			<field name="m_codeTypeAction"/>
+			<field name="m_creationDALSuiteRejet"/>
+			<field name="m_codeTypeAttente"/>
+			<field name="m_dateFCT" embedded="true"/>
+			<field name="m_typeExamenCreationDemande"/>
+			<field name="m_contributionNonPropositionCTP"/>
+			<field name="m_estContribPreavis"/>
+			<field name="m_estContribDif"/>
+			<field name="m_montantPreavisCR"/>
+			<field name="m_montantFormationD"/>
+			<field name="m_nombreHeureUn"/>
+			<field name="m_nombreHeureDeux"/>
+			<field name="m_topAppelContributions"/>
+			<field name="m_plafondMensuelRessourcesAss"/>
+			<field name="m_nbEmploisSalariesRetenus"/>
+			<field name="m_montantBrutTranche2"/>
+			<field name="m_montantCrcTranche2"/>
+			<field name="m_dureeTranche2"/>
+			<field name="m_montantBrutTranche3"/>
+			<field name="m_montantCrcTranche3"/>
+			<field name="m_dureeTranche3"/>
+			<field name="m_validationDAPE"/>
+			<field name="m_typeActionReclassementAvant"/>
+			<field name="m_typeActionReclassementApres"/>
+			<field name="m_estDerogatoire"/>
+			<field name="m_montantForfaitUnitaireRepas"/>
+			<field name="m_montantForfaitUnitaireHebergement"/>
+			<field name="m_montantIndiceKilometrique"/>
+			<field name="m_dateDepotAide" embedded="true"/>
+			<field name="m_attenteValidationDAPE"/>
+			<field name="m_attenteRetourJustificatif"/>
+			<field name="m_dateRetourJustificatif" embedded="true"/>
+			<field name="m_nombreEnfantsTotal"/>
+			<field name="m_numeroConventionGestion"/>
+			<field name="m_codeAffectation"/>
+			<field name="m_montantBonAvant"/>
+			<field name="m_typeBonAvant"/>
+			<field name="m_typeBonAvantDerogatoire"/>
+			<field name="m_montantBonApres"/>
+			<field name="m_montantBonApresDerogatoire"/>
+			<field name="m_typeBonApres"/>
+			<field name="m_typeBonApresDerogatoire"/>
+			<field name="m_montantBonAvantDerogatoire"/>
+			<field name="m_objectifLiquidation"/>
+			<field name="m_dureePostPrime"/>
+			<field name="m_indicateurPremiereDemandePostPrime"/>
+			<field name="m_indicateurAllongementDureeCSP"/>
+			<field name="m_indicateurDiminutionMontantCSP"/>
+			<field name="m_indicateurAllongementDureeCSP"/>
+			<field name="m_dateDepartDelai121j" embedded="true"/>
+			<field name="m_dateDebutDernierDelaiAttente" embedded="true"/>
+			<field name="m_dateIDE" embedded="true"/>
+			<field name="m_dateFaitGenerateurDroitPrecedent" embedded="true"/>
+			<field name="m_reglementApplicableDroit"/>
+			<field name="m_dureeActiviteEmployeursRAC"/>
+			<field name="m_coeffTPAppliqueRAC"/>
+			<field name="m_dureeActiviteEmployeursSP"/>
+			<field name="m_coeffTPAppliqueSP"/>
+			<field name="m_topDemandeASSSuiteDecheance"/>
+			<field name="m_attenteBlocageLiquidationAutoRepriseAss"/>
+			<field name="m_attenteNationaliteAValider"/>
+			<field name="m_topDetectionClauseRattrapage"/>
+			<field name="m_topSpectacle2016avantMepSI4"/>
+			<field name="m_topAreSpectacleEnCoursClauseRattrapage"/>
+			<field name="m_nombreJoursFranchiseCP"/>
+			<field name="m_baseCalculFranchiseCP"/>
+			<field name="m_franchiseCpMensuelle"/>
+			<field name="m_franchiseSalaireMensuelle"/>
+			<field name="m_baseCalculFranchiseSalaire"/>
+			<field name="m_nombreJoursFranchiseSalaire"/>
+			<field name="m_attenteIncoherenceSalaireNPDE"/>
+			<field name="m_identifiantPeriodeIncoherenceSalaireNPDE"/>
+			<field name="m_estPresencePNDS"/>
+			<field name="m_presenceDerniersSalaires"/>
+			<field name="m_codeSousProduitRejet"/>
+			<field name="m_nombreMoisPreavis"/>
+			<field name="m_identifiantPeriodeIncoherenceRessortissant"/>
+			<field name="m_dureeAllongementArefPossible"/>
+			<field name="m_dureeAllongementArefRealisee"/>
+			<field name="m_coefficientReducteurSJR"/>
+			<field name="m_plancherCoefReducteur"/>
+			<field name="m_topPresenceDiffereARCE"/>
+			<field name="m_diviseurIslr"/>
+			<field name="m_naturePeriodeSuspensive"/>
+			<field name="m_dateFinPeriodeSuspensive" embedded="true"/>
+			<field name="m_estAPSSuiteCRA"/>
+		</class>
+	</package>
+</jdo>

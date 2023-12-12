@@ -1,0 +1,20 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.dom.pc">
+		<class name="PreInscriptionPC" identity-type="datastore">
+			<field name="m_datePreInscription" embedded="true"/>
+			<field name="m_entretien"/>
+		</class>
+		<class name="EntretienPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateCessationInscription" embedded="true"/>
+			<field name="m_dateFinContrat" embedded="true"/>
+			<field name="m_dateDebutPra" embedded="true"/>
+			<field name="m_dateFinPra" embedded="true"/>
+			<field name="m_aExerceActiviteSalarie"/>
+			<field name="m_aSuiviFormation"/>
+			<field name="m_quantiteAffiliation" embedded="true"/>
+		</class>
+	</package>
+</jdo>

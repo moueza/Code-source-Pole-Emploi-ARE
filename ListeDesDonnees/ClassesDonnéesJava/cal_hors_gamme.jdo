@@ -1,0 +1,248 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.calcul.dom.pc">
+		<class name="CalendrierExecutionCalculPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etatAttribution"/>
+			<field name="m_dernierJourIndemnisablePourSuivi" embedded="true"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_dateFinDispositifCSP" embedded="true"/>
+			<field name="m_listePNDS">
+				<collection element-type="fr.unedic.cali.calcul.dom.periode.pc.PeriodeNonDeclareeSanctionPC"/>
+			</field>
+			<field name="m_listeDNJ">
+				<collection element-type="fr.unedic.cali.calcul.dom.periode.pc.DsmTravailPC"/>
+			</field>
+			<field name="m_etatAuDji"/>
+		</class>
+		<class name="CalendrierExecutionCalculPonctuelPC" persistence-capable-superclass="fr.unedic.cali.calcul.dom.pc.CalendrierExecutionCalculPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="CalendrierExecutionCalculPeriodiquePC" persistence-capable-superclass="fr.unedic.cali.calcul.dom.pc.CalendrierExecutionCalculPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_listChronologieUnitesTraitements">
+				<collection element-type="fr.unedic.cali.calcul.dom.pc.UniteTraitementPC"/>
+			</field>
+		</class>
+		<class name="UniteTraitementPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_nbJoursFormationEnFinDUT"/>
+			<field name="m_estFigee"/>
+			<field name="m_cumulJoursIndemnise"/>
+			<field name="m_estCumulJoursIndemnise"/>
+			<field name="m_nbMoisIndemniseAsu"/>
+			<field name="m_estNbMoisIndemniseAsu"/>
+			<field name="m_typeConstituantsCalculActiviteReduiteFinUT"/>
+			<field name="m_cumulNbJourAct"/>
+			<field name="m_constituantsCalculActiviteReduiteEnFinUT"/>
+			<field name="m_constituantsIndemnisationEnFinUT"/>
+			<field name="m_decalageEnFinUT"/>
+			<field name="m_collectionFinQuantiteDroit">
+				<collection element-type="fr.unedic.cali.calcul.dom.pc.EvenementFinQuantiteDroitPC"/>
+			</field>
+		</class>
+		<class name="ConstituantsCalculActiviteReduitePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="ConstituantsIndemnisationPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeFormuleMontant"/>
+			<field name="m_montantServi" embedded="true"/>
+			<field name="m_montantIndemNonDerog" embedded="true"/>
+			<field name="m_montantIndemDerog" embedded="true"/>
+			<field name="m_rangTranche"/>
+			<field name="m_dateFinDispositifCSP" embedded="true"/>
+			<field name="m_cumulTotalAllongementAREF"/>
+			<field name="m_dureeIndemnisation"/>
+			<field name="m_dureeRenouvellement"/>
+			<field name="m_dureeDetectionMaintien"/>
+			<field name="m_fraisRemboursementIndemnisation"/>
+			<field name="m_dureeProlongation"/>
+			<field name="m_capitalIndemnisation"/>
+			<field name="m_dureeFinancement"/>
+			<field name="m_listeDureeNonIndemnisables">
+				<collection element-type="fr.unedic.cali.dom.pc.DureeNonIndemnisablePC"/>
+			</field>
+		</class>
+		<class name="UniteTraitementForceePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_statut"/>
+			<field name="m_isStatutForce"/>
+			<field name="m_creditDecalage" embedded="true"/>
+			<field name="m_isCreditDecalageForce"/>
+			<field name="m_creditDecalagePNDS" embedded="true"/>
+			<field name="m_isCreditDecalagePNDSForce"/>
+			<field name="m_repriseMemeEmployeur"/>
+			<field name="m_isRepriseMemeEmployeurForcee"/>
+			<field name="m_commissionParitaire"/>
+			<field name="m_isCommissionParitaireForcee"/>
+			<field name="m_typeNeutralisation"/>
+			<field name="m_typeNeutralisationForce"/>
+			<field name="m_estNeutralisee"/>
+			<field name="m_estNeutraliseForcee"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_estDeblocageSeuil"/>
+			<field name="m_isDeblocageSeuil"/>
+			<field name="m_estDeblocageVariationRenumeration"/>
+			<field name="m_isDeblocageVariationRenumeration"/>
+			<field name="m_montantNetRevenusActiviteReprise"/>
+			<field name="m_isMontantNetRevenusActiviteReprise"/>
+			<field name="m_cumulARsurUtForce"/>
+			<field name="m_isCumulARSurUtForce"/>
+			<field name="m_passsDesactive"/>
+			<field name="m_estLeverBlocageDV"/>
+			<field name="m_estIgnorerAEDV"/>
+			<field name="m_motif"/>
+			<field name="m_estProlongementPaiementPANS"/>
+			<field name="m_isProlongementPaiementPANS"/>
+			<field name="m_nbJourSuspension" embedded="true"/>
+			<field name="m_isNbJourSuspensionForcee"/>
+		</class>
+		<class name="DecalagePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_decalageDuree"/>
+		</class>
+		<class name="DecalageDureePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_decalageCourant" embedded="true"/>
+		</class>
+		<class name="EvenementFinQuantiteDroitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dateEvenement" embedded="true"/>
+			<field name="m_typeQuantiteDroit"/>
+			<field name="m_quantiteDroit"/>
+		</class>
+		<class name="EtatAuDjiPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_estFigee"/>
+			<field name="m_periodePECEvenementReducteur" embedded="true"/>
+			<field name="m_cumulJoursIndemnise"/>
+			<field name="m_cumulMoisnonIndemnise"/>
+			<field name="m_cumulNbJourAct"/>
+			<field name="m_dateEpuisementDuree" embedded="true"/>
+			<field name="m_montantAidePaye"/>
+			<field name="m_montantAidePayeDerog"/>
+			<field name="m_reliquatFCP"/>
+			<field name="m_reliquatFS"/>
+			<field name="m_reportRlqFCP"/>
+			<field name="m_reportRlqFS"/>
+			<field name="m_periodeDA" embedded="true"/>
+			<field name="m_reliquatDA"/>
+			<field name="m_reliquatMaxFCP"/>
+			<field name="m_reliquatMaxFS"/>
+			<field name="m_montant"/>
+		</class>
+		<class name="EtatAuDernierJourAvantPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_delaiAttenteEntame"/>
+			<field name="m_reliquatDelaiAttente"/>
+			<field name="m_reliquatICCP"/>
+			<field name="m_reliquatISLR"/>
+			<field name="m_reliquatPMC"/>
+			<field name="m_periodeApplicationPMC" embedded="true"/>
+			<field name="m_periodeApplicationICCP" embedded="true"/>
+			<field name="m_periodeApplicationISLR" embedded="true"/>
+			<field name="m_periodeApplicationDelaiAttente" embedded="true"/>
+			<field name="m_dureeInitialePMC"/>
+			<field name="m_dureeInitialeICCP"/>
+			<field name="m_dureeInitialeISLR"/>
+			<field name="m_dureeInitialeDelaiAttente"/>
+			<field name="m_periodePECEvenementReducteur" embedded="true"/>
+			<field name="m_reliquatCP"/>
+			<field name="m_reliquatSalaire"/>
+			<field name="m_dureeInitialeCP"/>
+			<field name="m_dureeInitialeSalaire"/>
+			<field name="m_periodeApplicationCP" embedded="true"/>
+			<field name="m_periodeApplicationSalaire" embedded="true"/>
+		</class>
+		<class name="CalendrierExecutionAvantPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_dateDrv" embedded="true"/>
+			<field name="m_etatAuDernierJourAvant"/>
+		</class>
+		<class name="UniteTraitementAvantPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_dureeDelaiAttente"/>
+			<field name="m_dureeIccp"/>
+			<field name="m_dureeIslr"/>
+			<field name="m_dureePmc"/>
+			<field name="m_periode" embedded="true"/>
+		</class>
+	</package>
+	<package name="fr.unedic.cali.dom.pc">
+		<class name="DureeIndemnisationAbstraitePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+		</class>
+		<class name="DureeRenouvellementAbstraitePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+		</class>
+		<class name="DureeDetectionMaintienAbstraitePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+		</class>
+		<class name="RemboursementFraisIndemnisationAbstraitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+		</class>
+		<class name="DureeProlongationAbstraitePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+		</class>
+		<class name="MontantBaseAbstraitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_montantBrut" embedded="true"/>
+			<field name="m_crc" embedded="true"/>
+			<field name="m_estAvecPrecompte"/>
+		</class>
+		<class name="CapitalIndemnisationAbstraitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+		</class>
+		<class name="DureeFinancementAbstraitePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+		</class>
+		<class name="DureeNonIndemnisablePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periodeDA" embedded="true"/>
+			<field name="m_reliquat" embedded="true"/>
+			<field name="m_reliquatMaxMois" embedded="true"/>
+			<field name="m_etat"/>
+			<field name="m_quantiteCourante" embedded="true"/>
+			<field name="m_type"/>
+			<field name="m_quantiteInitial" embedded="true"/>
+			<field name="m_etat"/>
+		</class>
+	</package>
+	<package name="fr.unedic.cali.calcul.dom.periode.pc">
+		<class name="PeriodeNonDeclareeSanctionPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_periode" embedded="true"/>
+		</class>
+		<class name="DsmTravailPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_isJustifiee"/>
+			<field name="m_periode" embedded="true"/>
+		</class>
+	</package>
+</jdo>

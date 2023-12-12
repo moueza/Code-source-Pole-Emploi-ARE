@@ -1,0 +1,512 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.dom.pc">
+		<class name="DemandePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_motifReexamenPrincipalDemande"/>
+			<field name="m_demandeExpresseDemande"/>
+			<field name="m_liquideeAvecConflitsDemande"/>
+			<field name="m_estMigreeDemande"/>
+			<field name="m_estDeneutralisable"/>
+			<field name="m_estNeutraliseeLiquidationDemande"/>
+			<field name="m_estNeutraliseeCalculDemande"/>
+			<field name="m_estLiquidableDemande"/>
+			<field name="m_datePremiereValidationDemande" embedded="true"/>
+			<field name="m_dateDerniereValidationDemande" embedded="true"/>
+			<field name="m_dateDerniereNotificationDemande" embedded="true"/>
+			<field name="m_commentaire"/>
+			<field name="m_coefficientSaisonnierDonneesTemporaire"/>
+			<field name="m_caractereSaisonnierForceDonneesTemporaire"/>
+			<field name="m_typeCaractereSaisonnierForceDonneesTemporaire"/>
+			<field name="m_fortuiteCaractereSaisonnierParTypeDonneesTemporaire"/>
+			<field name="m_fortuiteCaractereSaisonnierParRythmeDonneesTemporaire"/>
+			<field name="m_coefficientTempsPartielDonneesTemporaire"/>
+			<field name="m_sjrDonneesTemporaire" embedded="true"/>
+			<field name="m_sjcDonneesTemporaire" embedded="true"/>
+			<field name="m_termePrcDonneesTemporaire" embedded="true"/>
+			<field name="m_allongementDelaiForclusionDonneesTemporaire" embedded="true"/>
+			<field name="m_allongementDelaiDecheanceDonneesTemporaire" embedded="true"/>
+			<field name="m_inopposabiliteDelaiDecheanceDonneesTemporaire"/>
+			<field name="m_quantiteJoursDiffereIccpConservatoireDonneesTemporaire" embedded="true"/>
+			<field name="m_canAvecCentVingtTrimestresDonneesTemporaire"/>
+			<field name="m_pensionRaccordementDonneesTemporaire"/>
+			<field name="m_capitalReliquatSecteurPublicDonneesTemporaire" embedded="true"/>
+			<field name="m_dateDebutPIDonneesTemporaire" embedded="true"/>
+			<field name="m_dateFinPIDonneesTemporaire" embedded="true"/>
+			<field name="m_quantiteAffiliationDonneesTemporaire" embedded="true"/>
+			<field name="m_identifiantPeriodeFctARetenirDonneesTemporaire"/>
+			<field name="m_dateAttributionDroitAnterieurSpDonneesTemporaire" embedded="true"/>
+			<field name="m_dateFgDroitAnterieurSpDonneesTemporaire" embedded="true"/>
+			<field name="m_dureeInitialeDroitAnterieurSpDonneesTemporaire"/>
+			<field name="m_sjrSPDonneesTemporaire" embedded="true"/>
+			<field name="m_termePrcSpDonneesTemporaire" embedded="true"/>
+			<field name="m_coefficientSaisonnierSpDonneesTemporaire"/>
+			<field name="m_coefficientTempsPartielSpDonneesTemporaire"/>
+			<field name="m_montantAideDonneesTemporaire"/>
+			<field name="m_natureMontantAideDonneesTemporaire"/>
+			<field name="m_avisCommissionParitaireDonneesTemporaire"/>
+			<field name="m_conditionCumulActiviteConserveeRemplieDonneesTemporaire"/>
+			<field name="m_pmcIndemnisableDonneesTemporaire"/>
+			<field name="m_finPmcDonneesTemporaire" embedded="true"/>
+			<field name="m_indentifiantFctPMCDonneesTemporaire"/>
+			<field name="m_sjrPerteActConserveeDonneesTemporaire" embedded="true"/>
+			<field name="m_sjcPerteActConserveeDonneesTemporaire" embedded="true"/>
+			<field name="m_coefficientTempsPartielActConserveeDonneesTemporaire"/>
+			<field name="m_identifiantPeriodeActiviteConserveePerdue"/>
+			<field name="m_reglementApplicableSpectacleDonneesTemporaire"/>
+			<field name="m_rangAllongementPraSpectacleDonneesTemporaire"/>
+			<field name="m_sripSpectacleDonneesTemporaire" embedded="true"/>
+			<field name="m_totalRemunerationDansPRCDonneesTemporaire" embedded="true"/>
+			<field name="m_nbHeuresTravailEtenduSpectacleDonneesTemporaire" embedded="true"/>
+			<field name="m_nbHeuresTravailPlafonneSpectacleDonneesTemporaire" embedded="true"/>
+			<field name="m_nbJourContratSurPraSpectacleDonneesTemporaire" embedded="true"/>
+			<field name="m_saisieCasGeneralDonneesTemporaire"/>
+			<field name="m_saisieCasSpectacleDonneesTemporaire"/>
+			<field name="m_dateChomageTotalSansRupture" embedded="true"/>
+			<field name="m_decisionCPRenseigneeChomageTotalSansRupture"/>
+			<field name="m_avisFavorableCPChomageTotalSansRupture"/>
+			<field name="m_sinistreOuCalamiteNaturelleChomageTotalSansRupture"/>
+			<field name="m_dateAttributionCPChomageTotalSansRupture" embedded="true"/>
+			<field name="m_accordPoursuite182JoursChomageTotalSansRupture"/>
+			<field name="m_dateMaximumPoursuiteIndeminisationChomageTotalSansRupture" embedded="true"/>
+			<field name="m_identifiantPeriodeFinContratDeTravailChomageTotalSansRupture"/>
+			<field name="m_leveeCondition28JoursChomageTotalSansRupture"/>
+			<field name="m_nouvelleDateAttributionChomageTotalSansRupture" embedded="true"/>
+			<field name="m_quantiteJoursDiffereChomageTotalSansRupture" embedded="true"/>
+			<field name="m_estPrimoDemandeurA3A4A5"/>
+			<field name="m_primoDemandeurA3A4A5Renseignee"/>
+			<field name="m_typeCoordinationEuropeenne"/>
+			<field name="m_nbJourImputer"/>
+			<field name="m_evenementReferenceExamen" embedded="true"/>
+			<field name="m_idPecSigmaFormulaireAsu"/>
+			<field name="m_referenceExterneFormulaireAsu"/>
+			<field name="m_typeExamenFormulaireAsu"/>
+			<field name="m_dateEvenementFormulaireAsu" embedded="true"/>
+			<field name="m_quantiteReliquatReliquat" embedded="true"/>
+			<field name="m_quantiteFormationReliquat" embedded="true"/>
+			<field name="m_quantiteAideReliquat" embedded="true"/>
+			<field name="m_reliquatValideReliquat"/>
+			<field name="m_cumulMoisActiviteReduiteReliquat"/>
+			<field name="m_quantiteReliquatRenouvellementReliquat" embedded="true"/>
+			<field name="m_presenceDonneesReliquat"/>
+			<field name="m_categorieParticuliereDonneesDal"/>
+			<field name="m_presenceDonneesDonneesDAL"/>
+			<field name="m_prsRepriseContextuelleElementJustification" embedded="true"/>
+			<field name="m_presenceDonneesElementJustification"/>
+			<field name="m_leveePmcDonneesTemporaires"/>
+			<field name="m_aBeneficeDroitAt12MoisDonneesTemporaires"/>
+			<field name="m_dureeAncienneteIntermittantSpectacleDonneesTemporaires"/>
+			<field name="m_estDemandeAtDonneesTemporaires"/>
+			<field name="m_estDemandeAfdDonneesTemporaires"/>
+			<field name="m_comportmentDemandeMigree"/>
+			<field name="m_dateFinDroitSpecNonMigre" embedded="true"/>
+			<field name="m_saisieCasExpatriesDonneesTemporaire"/>
+			<field name="m_rejetChomageVolontaireGARP"/>
+			<field name="m_quantiteJourICCP" embedded="true"/>
+			<field name="m_quantiteJourISLR" embedded="true"/>
+			<field name="m_identifiantFCTCarenceExpatries"/>
+			<field name="m_nbJourImputationDroitPrecedent"/>
+			<field name="m_topPremiereODARE"/>
+			<field name="m_montantContributionPourNonCTP"/>
+			<field name="m_dateAttributionAide" embedded="true"/>
+			<field name="m_estRetenirActSectPrive"/>
+			<field name="m_motifExamen"/>
+			<field name="m_dateFinEvenement" embedded="true"/>
+			<field name="m_quantiteJourImputationDonneesForceesReliquat" embedded="true"/>
+			<field name="m_dateEffetActConserveeDonneesTemporaire" embedded="true"/>
+			<field name="m_leverBornageDureeEffectiveRetraite"/>
+			<field name="m_dateAnnulationReexamen" embedded="true"/>
+			<field name="m_modeLiquidation"/>
+			<field name="m_typeContexteDemande"/>
+			<field name="m_typeContexteDemandeDonneesTemporaires"/>
+			<field name="m_dateFinPreavisLegal" embedded="true"/>
+			<field name="m_dureeFinancement"/>
+			<field name="m_presenceDonneesDemandeAssociee"/>
+			<field name="m_presenceDonneesTypeContexte"/>
+			<field name="m_saisieCasFinancementDonneesTemporaire"/>
+			<field name="m_fctDansLesDeuxMoisAvantFddAre"/>
+			<field name="m_sousTypeContexteDemande"/>
+			<field name="m_dateDebutJustifContexte" embedded="true"/>
+			<field name="m_dateFinJustifContexte" embedded="true"/>
+			<field name="m_etatForcageDelaiAttente"/>
+			<field name="m_numeroConventionPE"/>
+			<field name="m_codeAffectationConvention"/>
+			<field name="m_estDerogationCspDonneesTemporaire"/>
+			<field name="m_estSalarieHandicapeChomageTotalSansRupture"/>
+			<field name="m_dureeImputationSP"/>
+			<field name="m_djiSpFinDroit" embedded="true"/>
+			<field name="m_idExterneEmployeurSp"/>
+			<field name="m_estLeveeControlePANSSuiteARCEDonneesTemporaires"/>
+			<field name="m_estLeveeConditionACMemeEmployeur"/>
+			<field name="m_nbjImputationDroitAServir"/>
+			<field name="m_motifNbJourImputationDroitAServir"/>
+			<field name="m_motifNbJourImputationDroitCourant"/>
+			<field name="m_motifNbJourImputationDroitPrecedent"/>
+			<field name="m_motifMontantImputationDroitAServir"/>
+			<field name="m_montantImputationDroitAServir"/>
+			<field name="m_estIgnorerAttribPrecCSR"/>
+			<field name="m_estPCRCForceDroitCourant"/>
+			<field name="m_estPCRCForceDroitPrecedent"/>
+			<field name="m_dateDepartICCP" embedded="true"/>
+			<field name="m_estDemarcheReintegrationEffectuee"/>
+			<field name="m_dureeTheoriqueForcee" embedded="true"/>
+			<field name="m_dateExamenForcee" embedded="true"/>
+			<field name="m_dateAttributionForcee" embedded="true"/>
+			<field name="m_delaiAttenteForce"/>
+			<field name="m_conditionChomageInvolontaireSatistaite"/>
+			<field name="m_droitOptionForce"/>
+			<field name="m_djiDroitSpContexteRechargement" embedded="true"/>
+			<field name="m_fgdDroitSpContexteRechargement" embedded="true"/>
+			<field name="m_repriseForceeSurDemandeExpresse"/>
+			<field name="m_capitalReliquat"/>
+			<field name="m_montantJournalierReliquat"/>
+			<field name="m_estDesactivationPnds"/>
+			<field name="m_estNonExecutable"/>
+			<field name="m_dureePostPrime" embedded="true"/>
+			<field name="m_dateFinDispositifCSP" embedded="true"/>
+			<field name="m_motifEchecTraitement"/>
+			<field name="m_modeTraitementDemande"/>
+			<field name="m_dureeImputation"/>
+			<field name="m_nbJoursAllongement"/>
+			<field name="m_dateLimiteIndemnisationDonneeForcee" embedded="true"/>
+			<field name="m_dateTraitementDemande" embedded="true"/>
+			<field name="m_reliquatSecteurPublicEteintDonneesComplementaires"/>
+			<field name="m_reliquatSecteurPublicPrescritRejete"/>
+			<field name="m_leveeConditionCLCA"/>
+			<field name="m_identifiantObjetMetier"/>
+			<field name="m_conditionAffiliationSatisfaiteForcee"/>
+			<field name="m_conditionAncienneteSatisfaiteForcee"/>
+			<field name="m_dateFinPeriodeAncienneteForcee" embedded="true"/>
+			<field name="m_nombreJourTotalA8A10Force"/>
+			<field name="m_estRepriseStockSpectacle2016Faite"/>
+			<field name="m_attenteIncoherenceSalaireLevee"/>
+			<field name="m_competenceFinanciereDonneesTemporaires"/>
+			<field name="m_employeurSecteurPublicCompetentDonneesTemporaires"/>
+			<field name="m_montantIndemnitePreavisContribDonneesTemporaires"/>
+			<field name="m_contributionAdhesionVolontaireDonneesTemporaires"/>
+			<field name="m_nombreMoisPreavisDonneesTemporaires"/>
+			<field name="m_presenceDerniersSalairesDonneesTemporaires"/>
+			<field name="m_diviseurSjrDonneesTemporaires"/>
+			<field name="m_droitInterimaireDonneesTemporaires"/>
+			<field name="m_dureeAllongementAREFDonneesTemporaires"/>
+			<field name="m_reliquatAllongementArefPossibleReliquat"/>
+			<field name="m_rejetConditionChomageInvolontaire"/>
+			<field name="m_dateDepotOrigineFormulaireAsu" embedded="true"/>
+			<field name="m_leverConditionBeneficeAutreProduit"/>
+			<field name="m_topEligiblePourMapNG"/>
+			<field name="m_listeMotifsReexamenDemande">
+				<collection element-type="java.lang.String"/>
+			</field>
+			<field name="m_listeObjectifsExamenDemande">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.ObjectifExamenPC"/>
+			</field>
+			<field name="m_demandePivotDemande"/>
+			<field name="m_demandeOrigineDemande"/>
+			<field name="m_dossierAffectationAdmissionDemande"/>
+			<field name="m_dossierAffectationRepriseDemande"/>
+			<field name="m_classementAdministratifDemande"/>
+			<field name="m_forcageExecutionDemande">
+				<collection element-type="fr.unedic.cali.asu.calcul.dom.pc.UniteTraitementForceePC"/>
+			</field>
+			<field name="m_listePeriodesRepriseActiviteMemeEmployeurDonneesTemporaire">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeRepriseActiviteMemeEmployeurPossiblePC"/>
+			</field>
+			<field name="m_listePeriodesChomageSaisonnierRepContextuelleElementJustification">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeChomageSaisonnierPC"/>
+			</field>
+			<field name="m_demandeAssociee"/>
+			<field name="m_entretien"/>
+			<field name="m_saisieAntecedent"/>
+			<field name="m_listePensionInvaliditeDonneeForcee">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PensionInvaliditeChaineePC"/>
+			</field>
+			<field name="m_listeContextes">
+				<collection element-type="fr.unedic.cali.dom.pc.ContexteDemandePC"/>
+			</field>
+		</class>
+		<class name="PeriodeChomageSaisonnierPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_debut" embedded="true"/>
+			<field name="m_fin" embedded="true"/>
+		</class>
+		<class name="PeriodeRepriseActiviteMemeEmployeurPossiblePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_debut" embedded="true"/>
+			<field name="m_fin" embedded="true"/>
+			<field name="m_avis"/>
+			<field name="m_index"/>
+		</class>
+		<class name="DossierAffectationPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantSinistre"/>
+			<field name="m_idDecorReglementaire"/>
+			<field name="m_codeProduitSecours"/>
+			<field name="m_justificationAffectation"/>
+			<field name="m_typeDossier"/>
+			<field name="m_typeDossierExamen"/>
+			<field name="m_codeProduitExecutable"/>
+			<field name="m_demande" null-value="exception"/>
+			<field name="m_validationProduit"/>
+			<field name="m_delaiRecherche"/>
+		</class>
+		<class name="DossierAAffecterPC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.DossierAffectationPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="DossierAffectePC" persistence-capable-superclass="fr.unedic.cali.asu.dom.pc.DossierAffectationPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeProduitForce"/>
+			<field name="m_dossierExamen"/>
+		</class>
+		<class name="ObjectifExamenPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_type"/>
+			<field name="m_sousType"/>
+			<field name="m_etat"/>
+			<field name="m_numeroOrdre"/>
+		</class>
+		<class name="DelaiRechercheProduitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_debut" embedded="true"/>
+			<field name="m_fin" embedded="true"/>
+		</class>
+		<class name="ValidationProduitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_identifiantPeriodeValidationProduit"/>
+			<field name="m_qteAcquise" embedded="true"/>
+			<field name="m_nomReglementApplicable"/>
+			<field name="m_dateFinPeriode" embedded="true"/>
+			<field name="m_motifFinPeriode"/>
+			<field name="m_djtpPeriode" embedded="true"/>
+			<field name="m_codeProduitValide"/>
+			<field name="m_periodePra" embedded="true"/>
+			<field name="m_catEmploiPart"/>
+			<field name="m_popOccHorsFrance"/>
+			<field name="m_justificationCalculAffiliation"/>
+			<field name="m_justificationAffiliationJoursTravailles"/>
+		</class>
+		<class name="ContributionParticuliereAbstraitPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="SaisieAntecedentPC">
+			<field name="m_contexteDemande"/>
+			<field name="m_codeProduit"/>
+			<field name="m_nomReglementApplicable"/>
+			<field name="m_dateAttribution" embedded="true"/>
+			<field name="m_identifiantFaitGenerateur"/>
+			<field name="m_identifiantFCTRetenue"/>
+			<field name="m_salaireJournalierReferencePlafonne" embedded="true"/>
+			<field name="m_termePRC" embedded="true"/>
+			<field name="m_salaireJournalierConservePlafonne" embedded="true"/>
+			<field name="m_dureeInitialeDroit" embedded="true"/>
+			<field name="m_coefficientTempsPartiel"/>
+			<field name="m_coefficientSaisonnier"/>
+			<field name="m_typeCaractereSaisonnier"/>
+			<field name="m_a3ansActiviteEn5ans"/>
+			<field name="m_salaireReferenceSurBaseSMIC"/>
+			<field name="m_codeEmploiA2B"/>
+			<field name="m_rangAllongementPraSpectacle"/>
+			<field name="m_salaireReferenceInitialPlafonne" embedded="true"/>
+			<field name="m_nbHeuresTravailPlafonne"/>
+			<field name="m_nbHeuresTravailEtendu"/>
+			<field name="m_nbJourContratSurPra"/>
+			<field name="m_dateDernierJourCalcule" embedded="true"/>
+			<field name="m_nombreJourIndemniseARE"/>
+			<field name="m_premierJourIndemnisable" embedded="true"/>
+			<field name="m_nombreJourIndemniseAREF"/>
+			<field name="m_reliquatDuree" embedded="true"/>
+			<field name="m_cumulMoisActiviteReduite"/>
+			<field name="m_nombreMoisIndemnisationAssurance"/>
+			<field name="m_reliquatDureeRenouvellement" embedded="true"/>
+			<field name="m_estDroitMaintenu"/>
+			<field name="m_estEnFormationAuDJC"/>
+			<field name="m_dateFinPMC" embedded="true"/>
+			<field name="m_reliquatJoursICCP"/>
+			<field name="m_reliquatJoursISLR"/>
+			<field name="m_reliquatJoursDelaiAttente"/>
+			<field name="m_reliquatJourDiffereStandard"/>
+			<field name="m_identifiantCompetence"/>
+			<field name="m_typeCoordinationEuropeenne"/>
+			<field name="m_dateDebutPRC" embedded="true"/>
+			<field name="m_dateBanalisee1" embedded="true"/>
+			<field name="m_dateBanalisee2" embedded="true"/>
+			<field name="m_dateBanalisee3" embedded="true"/>
+			<field name="m_quantiteBanalisee1" embedded="true"/>
+			<field name="m_quantiteBanalisee2" embedded="true"/>
+			<field name="m_quantiteBanalisee3" embedded="true"/>
+			<field name="m_chaineBanalisee1"/>
+			<field name="m_chaineBanalisee2"/>
+			<field name="m_chaineBanalisee3"/>
+			<field name="m_topBanalise1"/>
+			<field name="m_topBanalise2"/>
+			<field name="m_topBanalise3"/>
+			<field name="m_delaiAttente"/>
+			<field name="m_etablissementFinanceur"/>
+			<field name="m_codeAffectation"/>
+			<field name="m_estSituationParticuliereAre2001"/>
+			<field name="m_montantReadmissionRetenu"/>
+			<field name="m_idExterneEmployeurSp"/>
+			<field name="m_revenuMensuelANSConservee"/>
+			<field name="m_dateAdmission" embedded="true"/>
+			<field name="m_nbMoisCivilsNonPayes"/>
+			<field name="m_contexteLimiteIndemnisation"/>
+			<field name="m_dateLimite" embedded="true"/>
+			<field name="m_entreeCra"/>
+			<field name="m_montantCra" embedded="true"/>
+			<field name="m_sjmCra" embedded="true"/>
+			<field name="m_franchiseCPTotale"/>
+			<field name="m_franchiseCPMensuelle"/>
+			<field name="m_franchiseSalaireTotale"/>
+			<field name="m_sortieCra"/>
+			<field name="m_franchiseSalaireMensuelle"/>
+			<field name="m_reliquatFCPDJC"/>
+			<field name="m_reliquatFSDJC"/>
+			<field name="m_quantiteFCPConsoDJC"/>
+			<field name="m_quantiteFSConsoDJC"/>
+			<field name="m_quantiteReportFCP"/>
+			<field name="m_quantiteReportFS"/>
+			<field name="m_dureeAllongementAREF"/>
+			<field name="m_reliquatDureeAllongementAREF"/>
+		</class>
+		<class name="AffiliationAssimileePC" identity-type="datastore">
+			<field name="m_idPeriodeActivite"/>
+			<field name="m_periodeAssimilation" embedded="true"/>
+			<field name="m_nature"/>
+			<field name="m_quantiteAssimilation" embedded="true"/>
+		</class>
+		<class name="ZoneMemeExercicePC" identity-type="datastore">
+			<field name="m_periodeZomeMemeExercice" embedded="true"/>
+			<field name="m_quantiteAffiliationRetenue" embedded="true"/>
+			<field name="m_quantiteAssimilationRetenue" embedded="true"/>
+			<field name="m_elementZoneMemeExercice">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.ElementZoneMemeExercicePC"/>
+			</field>
+		</class>
+		<class name="AffiliationSupplementairePC" identity-type="datastore">
+			<field name="m_periodeAffiliationSupplementaire" embedded="true"/>
+			<field name="m_intensite"/>
+			<field name="m_nature"/>
+			<field name="m_quantiteInitiale" embedded="true"/>
+			<field name="m_quantiteRetenue" embedded="true"/>
+			<field name="m_idPeriodeActivite"/>
+			<field name="m_reglement"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_periodeActiviteSalariee" embedded="true"/>
+			<field name="m_horaireSalarie"/>
+		</class>
+		<class name="ElementZoneMemeExercicePC" identity-type="datastore">
+			<field name="m_quantiteAffiliation" embedded="true"/>
+			<field name="m_affiliationAssimilee"/>
+			<field name="m_affiliationSupplementaire"/>
+			<field name="m_periodeElementaire"/>
+		</class>
+		<class name="JustificationAffiliationPC" identity-type="datastore">
+			<field name="m_periodeRechercheAffiliation" embedded="true"/>
+			<field name="m_quantiteAffiliation" embedded="true"/>
+			<field name="m_quantiteAssimilation" embedded="true"/>
+			<field name="m_quantiteDernierJourFevrier" embedded="true"/>
+			<field name="m_plafondAssimilation" embedded="true"/>
+			<field name="m_topConflits"/>
+			<field name="m_estAffiliationPlafonnee"/>
+			<field name="m_quantiteImputee" embedded="true"/>
+			<field name="m_affiliationAssimilee">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.AffiliationAssimileePC"/>
+			</field>
+			<field name="m_affiliationSupplementaire">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.AffiliationSupplementairePC"/>
+			</field>
+			<field name="m_periodeElementaire">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeElementairePC"/>
+			</field>
+			<field name="m_plafonnementAffiliation">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PlafonnementAffiliationPC"/>
+			</field>
+			<field name="m_zoneMemeExercice">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.ZoneMemeExercicePC"/>
+			</field>
+		</class>
+		<class name="PeriodeElementairePC" identity-type="datastore">
+			<field name="m_periodePE" embedded="true"/>
+			<field name="m_intensite"/>
+			<field name="m_nature"/>
+			<field name="m_quantiteInitialeHeure" embedded="true"/>
+			<field name="m_quantitePlafonnee" embedded="true"/>
+			<field name="m_quantiteRetenue" embedded="true"/>
+			<field name="m_idPeriodeActivite"/>
+			<field name="m_reglement"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_periodeActiviteSalariee" embedded="true"/>
+			<field name="m_estSanctionnee"/>
+		</class>
+		<class name="PlafonnementAffiliationPC" identity-type="datastore">
+			<field name="m_moisCivil" embedded="true"/>
+			<field name="m_coefficientReducteurAffiliation"/>
+			<field name="m_coefficientReducteurAffiliationSupplementaire"/>
+		</class>
+		<class name="PensionInvaliditeChaineePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_organismeFinanceur"/>
+			<field name="m_statut"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_listeSousPensionInvalidite">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.SousPensionInvaliditeChaineePC"/>
+			</field>
+		</class>
+		<class name="SousPensionInvaliditeChaineePC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeNature"/>
+			<field name="m_etat"/>
+			<field name="m_montant" embedded="true"/>
+			<field name="m_periode" embedded="true"/>
+		</class>
+		<class name="JustificationAffiliationJoursTravaillesPC" identity-type="datastore">
+			<field name="m_nombreJoursAppartenance"/>
+			<field name="m_nombreJoursAffiliation"/>
+			<field name="m_nombreJoursAssimilation"/>
+			<field name="m_periodeRechercheAffiliation" embedded="true"/>
+			<field name="m_plafondAssimilation"/>
+			<field name="m_affiliationPlafonnee"/>
+			<field name="m_periodeAssimilation">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeAssimileePC"/>
+			</field>
+			<field name="m_semaineAffiliation">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.SemaineCivilePC"/>
+			</field>
+			<field name="m_plafonnementAffiliation">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PlafonnementAffiliationPC"/>
+			</field>
+			<field name="m_affiliationSupplementaire">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.AffiliationSupplementairePC"/>
+			</field>
+			<field name="m_periodeElementaire">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.PeriodeElementairePC"/>
+			</field>
+		</class>
+		<class name="SemaineCivilePC" identity-type="datastore">
+			<field name="m_quantiteRetenue"/>
+			<field name="m_totalJoursTravailles"/>
+			<field name="m_nombreJoursEmploi"/>
+			<field name="m_estSanctionne"/>
+			<field name="m_periode" embedded="true"/>
+			<field name="m_elementSemaineCivile">
+				<collection element-type="fr.unedic.cali.asu.dom.pc.ElementSemaineCivilePC"/>
+			</field>
+		</class>
+		<class name="ElementSemaineCivilePC" identity-type="datastore">
+			<field name="m_identifiantContrat"/>
+			<field name="m_periodeContrat" embedded="true"/>
+			<field name="m_raisonSociale"/>
+			<field name="m_nomReglement"/>
+			<field name="m_nature"/>
+			<field name="m_estSanctione"/>
+			<field name="m_nombreJoursTravailles"/>
+		</class>
+		<class name="PeriodeAssimileePC" identity-type="datastore">
+			<field name="m_periode" embedded="true"/>
+			<field name="m_libelle"/>
+			<field name="m_heuresInitiales"/>
+			<field name="m_heuresRetenues"/>
+			<field name="m_nombreJoursTravailles"/>
+		</class>
+	</package>
+</jdo>

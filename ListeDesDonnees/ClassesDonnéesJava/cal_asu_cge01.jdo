@@ -1,0 +1,16 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cge01.calcul.dom.pc">
+		<class name="DureeIndemnisationPC" persistence-capable-superclass="fr.unedic.cali.dom.pc.DureeIndemnisationAbstraitePC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeFormuleMontant"/>
+		</class>
+		<class name="MontantPC" persistence-capable-superclass="fr.unedic.cali.dom.pc.MontantBaseAbstraitPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+		<class name="MontantAREFPC" persistence-capable-superclass="fr.unedic.cali.asu.cge01.calcul.dom.pc.MontantPC">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+		</class>
+	</package>
+</jdo>

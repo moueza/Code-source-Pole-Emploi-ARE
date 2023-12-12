@@ -1,0 +1,72 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<!DOCTYPE jdo SYSTEM "jdo.dtd">
+<jdo>
+	<package name="fr.unedic.cali.asu.cge01.p03.liquidation.dom.pc">
+		<class name="ConditionsAttributionAdmissionPC" identity-type="datastore">
+			<implements name="fr.unedic.transverse.dom.spec.DomPCSpec"/>
+			<field name="m_codeMotifEchecConditionRechercheEmploi"/>
+			<field name="m_etatConditionRechercheEmploi"/>
+			<field name="m_presenceDonneesConditionRechercheEmploi"/>
+			<field name="m_identifiantPeriodeFaitGenerateurConditionFaitGenerateur"/>
+			<field name="m_codeMotifEchecConditionFaitGenerateur"/>
+			<field name="m_etatConditionFaitGenerateur"/>
+			<field name="m_motifFinPeriodeConditionFaitGenerateur"/>
+			<field name="m_ageIndividuDateFGConditionFaitGenerateur" embedded="true"/>
+			<field name="m_dateFGConditionFaitGenerateur" embedded="true"/>
+			<field name="m_dateEngagementProcedureConditionFaitGenerateur" embedded="true"/>
+			<field name="m_dateEvenementConditionFaitGenerateur" embedded="true"/>
+			<field name="m_presenceDonneesConditionFaitGenerateur"/>
+			<field name="m_codeMotifEchecConditionChomageTotal"/>
+			<field name="m_etatConditionChomageTotal"/>
+			<field name="m_presenceDonneesConditionChomageTotal"/>
+			<field name="m_situationConditionAge"/>
+			<field name="m_dateEffetPensionConditionAge" embedded="true"/>
+			<field name="m_codeMotifEchecConditionAge"/>
+			<field name="m_etatConditionAge"/>
+			<field name="m_presenceDonneesConditionAge"/>
+			<field name="m_quantiteAppartenanceConditionQuantiteAffiliation" embedded="true"/>
+			<field name="m_codeMotifEchecConditionQuantiteAffiliation"/>
+			<field name="m_etatConditionQuantiteAffiliation"/>
+			<field name="m_presenceDonneesConditionQuantiteAffiliation"/>
+			<field name="m_codeMotifEchecConditionChomageInvolontaire"/>
+			<field name="m_etatConditionChomageInvolontaire"/>
+			<field name="m_situationConditionChomageInvolontaire"/>
+			<field name="m_presenceDonneesConditionChomageInvolontaire"/>
+			<field name="m_situationConditionActiviteConservee"/>
+			<field name="m_codeMotifEchecConditionActiviteConservee"/>
+			<field name="m_etatConditionActiviteConservee"/>
+			<field name="m_nombreHeuresMensuelActiviteConserveeConditionActiviteConservee"/>
+			<field name="m_montantMensuelActiviteConserveeConditionActiviteConservee"/>
+			<field name="m_seuilMontantMensuelActiviteConserveeConditionActiviteConservee"/>
+			<field name="m_presenceDonneesConditionActiviteConservee"/>
+			<field name="m_codeMotifEchecConditionCumulPrestationFamiliale"/>
+			<field name="m_etatConditionCumulPrestationFamiliale"/>
+			<field name="m_presenceDonneesConditionCumulPrestationFamiliale"/>
+			<field name="m_codeMotifEchecConditionMontantNonNul"/>
+			<field name="m_etatConditionConditionMontantNonNul"/>
+			<field name="m_presenceDonneesConditionMontantNonNul"/>
+			<field name="m_codeMotifEchecConditionCSRDateAttribution"/>
+			<field name="m_etatConditionCSRDateAttribution"/>
+			<field name="m_presenceDonneesConditionCSRDateAttributionPendantSuspension"/>
+			<field name="m_codeMotifEchecConditionCSRAccordCP"/>
+			<field name="m_etatConditionCSRAccordCP"/>
+			<field name="m_presenceDonneesConditionCSRAccordCP"/>
+			<field name="m_codeMotifEchecConditionCSR28Jours"/>
+			<field name="m_etatConditionCSR28Jours"/>
+			<field name="m_presenceDonneesConditionCSR28Jours"/>
+			<field name="m_quantiteAppartenanceSecondaireConditionQuantiteAffiliation" embedded="true"/>
+			<field name="m_refusFneConditionFaitGenerateur"/>
+			<field name="m_presenceDonneesConditionValiditeReliquat"/>
+			<field name="m_etatConditionValiditeReliquat"/>
+			<field name="m_codeMotifEchecConditionValiditeReliquat"/>
+			<field name="m_motifNonValiditeConditionValiditeReliquat"/>
+			<field name="m_causeExtinctionConditionValiditeReliquat"/>
+			<field name="m_dateDecheanceConditionValiditeReliquat" embedded="true"/>
+			<field name="m_identifiantActivitePortantDVConditionChomageInvolontaire"/>
+			<field name="m_dureeAeDvConditionChomageInvolontaire"/>
+			<field name="m_intensiteHoraireSalarieAeDvConditionChomageInvolontaire" embedded="true"/>
+			<field name="m_quantiteAffiliationPrincipaleInopposabiliteConditionChomageInvolontaire" embedded="true"/>
+			<field name="m_quantiteAffiliationSecondaireInopposabiliteConditionChomageInvolontaire" embedded="true"/>
+		</class>
+	</package>
+</jdo>
